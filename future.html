@@ -54,18 +54,19 @@
                                     </div>
                                     <ul class="menu">
                                         <li class="menu-iteam"><a href="index.html">Home</a></li>
-                                        <li class="menu-iteam"><a href="project.html">Projection</a></li>
+                                        <li class="menu-iteam"><a href="project.html">Project</a></li>
 
-                                        <li class="menu-iteam menu-iteam-has-childrean"><a href="#"
+                                        <li class="menu-iteam menu-iteam-has-childrean"><a href="des_1.html"
                                                 data-toggle="submenu">Design<i class="plus"></i></a>
                                             <ul class="submenu">
-                                                <li class="menu-iteam"><a href="solutions.html">Solutions</a></li>
-                                                <li class="menu-iteam"><a href="solution_2.html">Solutions Details</a>
-                                                </li>
-                                                <li class="menu-iteam"><a href="testimonials.html">Testimoials</a></li>
+                                                <li class="menu-iteam"><a href="des_1.html">Inspiration</a></li>
+                                                <li class="menu-iteam"><a href="des_2.html">Algorithm design</a></li>
+                                                <li class="menu-iteam"><a href="des_3.html">Molecular Structure Design</a></li>
+                                                <li class="menu-iteam"><a href="des_4.html">Characterization</a></li>
+                                                <li class="menu-iteam"><a href="des_5.html">Technology Industrial Chain Design</a></li>
                                             </ul>
                                         </li>
-                                        <li class="menu-iteam menu-iteam-has-childrean"><a href="#"
+                                        <li class="menu-iteam menu-iteam-has-childrean"><a href="exp_1.html"
                                                 data-toggle="submenu">Experiment<i class="plus"></i></a>
                                             <ul class="submenu">
                                                 <li class="menu-iteam"><a href="exp_1.html">DNA base encoding</a></li>
@@ -99,7 +100,7 @@
         </div>
     </div>
     <!-- navbar  -->
-    <div class="page-area">
+       <div class="page-area">
         <div class="container">
             <div class="row">
                 <div class="home-shape">
@@ -239,6 +240,14 @@
     <!-- 项目页面不需要分页 -->
     <div class="spacer" style="height: 40px;"></div>
 
+    <!-- 粒子效果容器 -->
+    <div class="particles"></div>
+    
+    <!-- 加载进度条 -->
+    <div class="loading-bar">
+        <div class="loading-progress"></div>
+    </div>
+
    
     <!-- Js File -->
     <script src="assets/js/modernizr.min.js"></script>
@@ -251,54 +260,347 @@
     <script src="assets/js/mixitup.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <!-- 自定义动画脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 粒子系统
+            function createParticles() {
+                const particlesContainer = document.querySelector('.particles');
+                const particleCount = 50;
+                
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 6 + 's';
+                    particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                    particlesContainer.appendChild(particle);
+                }
+            }
+
+            // 滚动动画观察器
+            function initScrollAnimations() {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -100px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('fade-in');
+                        }
+                    });
+                }, observerOptions);
+
+                // 观察需要动画的元素，但不会导致窗口滚动
+                const animatedElements = document.querySelectorAll('.feature-card, .challenge-card, .conclusion-box');
+                animatedElements.forEach(el => observer.observe(el));
+            }
+
+            // 加载进度条
+            function initLoadingBar() {
+                const loadingBar = document.querySelector('.loading-progress');
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += Math.random() * 30;
+                    if (progress >= 100) {
+                        progress = 100;
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            document.querySelector('.loading-bar').style.opacity = '0';
+                            setTimeout(() => {
+                                document.querySelector('.loading-bar').style.display = 'none';
+                            }, 500);
+                        }, 200);
+                    }
+                    loadingBar.style.width = progress + '%';
+                }, 100);
+            }
+
+            // 悬浮效果增强
+            function initHoverEffects() {
+                // 移除了卡片的位移和缩放效果
+                // 保留CSS中的阴影和边框效果即可
+            }
+
+            // 打字机效果
+            function typeWriter(element, text, speed = 100) {
+                let i = 0;
+                element.innerHTML = '';
+                function type() {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    }
+                }
+                type();
+            }
+
+            // 初始化所有功能
+            createParticles();
+            initScrollAnimations();
+            initLoadingBar();
+            initHoverEffects();
+
+            // 页面加载完成后的动画
+            window.addEventListener('load', () => {
+                document.body.classList.add('loaded');
+                
+                // 为标题添加打字机效果
+                const title = document.querySelector('.design-title');
+                if (title) {
+                    const titleText = title.textContent;
+                    setTimeout(() => {
+                        typeWriter(title, titleText, 100);
+                    }, 500);
+                }
+            });
+        });
+    </script>
 </body>
 
 <style>
-    body {
-        font-family: 'Catamaran', sans-serif;
-        margin: 0;
-        background-color: #f8f9fc;
-        line-height: 1.6;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+    :root {
+        --backdrop-blur: blur(20px);
+        --glass-border: rgba(255, 255, 255, 0.2);
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --shadow-colored: 0 8px 32px rgba(102, 126, 234, 0.3);
+        --primary-gradient: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
     }
 
-    /* 导航条样式 */
+    body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+        color: #333;
+        overflow-x: hidden;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.2) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    /* 粒子效果 */
+    .particles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .particle {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: #00d4ff;
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite, colorShift 8s ease-in-out infinite;
+        opacity: 0.6;
+        box-shadow: 0 0 4px #00d4ff;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+        50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+    }
+
+    @keyframes colorShift {
+        0% { background: #00d4ff; box-shadow: 0 0 4px #00d4ff; }
+        33% { background: #00ff88; box-shadow: 0 0 4px #00ff88; }
+        66% { background: #ffaa00; box-shadow: 0 0 4px #ffaa00; }
+        100% { background: #00d4ff; box-shadow: 0 0 4px #00d4ff; }
+    }
+
+    /* 加载进度条 */
+    .loading-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 10000;
+        transition: opacity 0.5s ease;
+    }
+
+    .loading-progress {
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        width: 0%;
+        transition: width 0.3s ease;
+        box-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+    }
+
+    /* 页面加载状态 */
+    body:not(.loaded) .main-box {
+        opacity: 1;
+    }
+
+    body.loaded .main-box {
+        opacity: 1;
+    }
+
+    /* 滚动动画 */
+    .fade-in {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+     /* 导航栏样式 */
     .navbar-area1 {
         width: 100%;
-        height: 60px;
+        height: auto;
+        position: relative;
+        z-index: 1000;
     }
-    
+
     .full-nav1 {
         position: fixed;
         top: 0;
         left: 0;
-        padding-top: 15px;
-        padding-bottom: 15px;
         width: 100%;
+        background: rgba(15, 23, 42, 1);
+        backdrop-filter: var(--backdrop-blur);
+        border-bottom: 1px solid var(--glass-border);
         z-index: 999;
-        height: auto;
-        background-color: #031350;
-        box-shadow: 0 2px 15px rgba(3, 19, 80, 0.4);
+        transition: var(--transition);
+        padding: 15px 0;
     }
 
-    .page-area1 {
-        padding-top: 20px;
-        padding-bottom: 50px;
-        position: relative;
-        background: linear-gradient(135deg, #020940, #0a2a8a);
+    .full-nav1:hover {
+        background: rgba(15, 23, 42, 0.95);
+        box-shadow: var(--shadow-colored);
     }
 
-    /* 主内容区样式 */
-    .main-box {
-        background-color: #ffffff;
-        border-radius: 12px;
-        padding: 40px;
-        margin: 50px 200px;
-        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+
+    /* 页面头部区域 */
+    .page-area {
+        padding-top: 120px;
+        padding-bottom: 80px;
         position: relative;
+        background: var(--primary-gradient);
         overflow: hidden;
     }
 
-    /* 主标题样式 */
+    .page-area::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dna-helix" patternUnits="userSpaceOnUse" width="30" height="60"><path d="M15,0 Q20,15 15,30 Q10,45 15,60" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none"/><path d="M15,0 Q10,15 15,30 Q20,45 15,60" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/></pattern></defs><rect width="100" height="100" fill="url(%23dna-helix)"/></svg>');
+        animation: dnaFlow 30s linear infinite;
+        opacity: 0.3;
+    }
+
+    @keyframes dnaFlow {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-60px); }
+    }
+
+    .page-content {
+        text-align: center;
+        color: white;
+        position: relative;
+        z-index: 2;
+    }
+
+    .page-content h2 {
+        font-family: 'Orbitron', monospace;
+        font-size: 3.5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+        background: linear-gradient(120deg, #ffffff, #f0f8ff, #e6f3ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        animation: titlePulse 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes titlePulse {
+        0% { 
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            transform: scale(1);
+        }
+        100% { 
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+            transform: scale(1.02);
+        }
+    }
+
+    .main-box {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 50px;
+        margin: 50px auto;
+        max-width: 1200px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+        animation: slideInUp 0.8s ease-out;
+    }
+
+    .main-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        opacity: 0.7;
+    }
+
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* 保持future.html原有main-box内容的样式 */
     .title-container {
         text-align: center;
         margin-bottom: 40px;
@@ -307,25 +609,26 @@
     }
     
     .project-title {
-        color: #2c3e50;
+        color: #ffffff;
         font-size: 2.5rem;
         text-align: center;
         position: relative;
         font-weight: 700;
         padding: 0 20px;
         display: inline-block;
-        background: linear-gradient(120deg, #3498db 0%, #2c3e50 100%);
+        background: linear-gradient(120deg, #667eea 0%, #764ba2 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         margin-bottom: 15px;
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
     }
 
     .title-decoration {
         position: relative;
         height: 6px;
         width: 120px;
-        background: linear-gradient(90deg, #3498db, #2980b9);
+        background: linear-gradient(90deg, #667eea, #764ba2);
         margin: 0 auto;
         border-radius: 3px;
     }
@@ -337,7 +640,7 @@
         height: 12px;
         border-radius: 50%;
         top: -3px;
-        background: #3498db;
+        background: #667eea;
     }
     
     .title-decoration:before {
@@ -351,272 +654,187 @@
     /* 章节样式 */
     .project-section {
         margin-bottom: 50px;
-        padding: 25px;
-        border-radius: 10px;
-        background-color: rgba(248, 249, 250, 0.7);
-        transition: all 0.3s ease;
-        border-left: 5px solid transparent;
+        padding: 30px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .project-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        opacity: 0.8;
     }
     
     .project-section:hover {
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        background-color: #fff;
-        border-left: 5px solid #3498db;
-        transform: translateY(-5px);
+        box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+        border-color: rgba(240, 147, 251, 0.3);
     }
 
     /* 章节标题样式 */
     .section-heading {
-        color: #2c3e50;
-        font-size: 1.75rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ffffff;
         margin-bottom: 25px;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        border-bottom: 2px solid #eaecef;
-        padding-bottom: 12px;
-    }
-    
-    .section-heading:before {
-        content: '';
-        display: inline-block;
-        width: 8px;
-        height: 25px;
-        background: linear-gradient(to bottom, #3498db, #2980b9);
-        margin-right: 15px;
-        border-radius: 4px;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
     }
 
     /* 段落样式 */
     .main-box p {
-        color: #3a4a5a;
+        color: #e8f0fe;
         line-height: 1.8;
         margin-bottom: 20px;
-        font-size: 17px;
+        font-size: 1.1rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
     }
 
     /* 应用领域样式 */
     .application-area {
         margin: 25px 0;
-        padding: 20px 25px;
-        border-radius: 8px;
-        background-color: #f8f9fa;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        border-left: 4px solid #3498db;
-        transition: all 0.3s ease;
+        padding: 30px;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .application-area::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        opacity: 0.8;
     }
     
     .application-area:hover {
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
-        transform: translateX(5px);
-        border-left-width: 8px;
-    }
-    
-    .application-area:nth-child(odd) {
-        border-left-color: #3498db;
-    }
-    
-    .application-area:nth-child(even) {
-        border-left-color: #e74c3c;
+        box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+        border-color: rgba(240, 147, 251, 0.3);
     }
 
     /* 应用领域标题样式 */
     .app-heading {
-        color: #2c3e50;
-        font-size: 1.3rem;
+        color: #ffffff;
+        font-size: 1.4rem;
         margin-bottom: 15px;
         font-weight: 600;
         display: flex;
         align-items: center;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
     }
     
     .app-icon {
         display: inline-block;
         width: 32px;
         height: 32px;
-        margin-right: 10px;
+        margin-right: 15px;
         vertical-align: middle;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-    }
-    
-    .luxury-icon {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233498db"><path d="M12 2L9 9h6l-3-7zm-7 8l-2 2 2 2 2-2-2-2zm14 0l-2 2 2 2 2-2-2-2zM5 14l-3 6h20l-3-6H5z"/></svg>');
-    }
-    
-    .pharma-icon {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e74c3c"><path d="M19 3h-4a3 3 0 00-3 3v15a1 1 0 001 1h8a1 1 0 001-1V6a3 3 0 00-3-3zm-1 11h-2v2h-2v-2h-2v-2h2V10h2v2h2v2zM8 3H4a3 3 0 00-3 3v15a1 1 0 001 1h8a1 1 0 001-1V6a3 3 0 00-3-3z"/></svg>');
-    }
-    
-    .food-icon {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232ecc71"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.21 1.79 4 4 4v9h2v-9c2.21 0 4-1.79 4-4V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg>');
-    }
-    
-    .electronics-icon {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%239b59b6"><path d="M7 5h10v2h2V3c0-1.1-.9-1.99-2-1.99L7 1c-1.1 0-2 .9-2 2v4h2V5zm8.41 11.59L20 12l-4.59-4.59L14 8.83 17.17 12 14 15.17l1.41 1.42zM10 15.17L6.83 12 10 8.83 8.59 7.41 4 12l4.59 4.59L10 15.17zM17 19H7v-2H5v4c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-4h-2v2z"/></svg>');
-    }
-    
-    .documents-icon {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f39c12"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>');
-    }
-    
-    .supply-chain-icon {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233498db"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>');
-    }
-    
-    .food-safety-icon {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232ecc71"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>');
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 8px;
     }
 
-    /* 列表样式 */
-    .feature-list, .innovation-list, .impact-list {
-        padding-left: 25px;
-        margin-bottom: 20px;
-        list-style-type: none;
-    }
-
-    .feature-list li, .innovation-list li, .impact-list li {
-        margin-bottom: 18px;
-        line-height: 1.7;
+    /* 结论样式 */
+    .conclusion-box {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 40px;
+        border-radius: 20px;
+        margin: 50px 0;
         position: relative;
-        padding-left: 28px;
-    }
-    
-    .feature-list li:before, 
-    .innovation-list li:before, 
-    .impact-list li:before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        color: #2ecc71;
-        font-weight: bold;
+        overflow: hidden;
+        animation: gradientShift 6s ease-in-out infinite alternate;
     }
 
-    .nested-list {
-        margin-top: 12px;
-        margin-bottom: 5px;
-        padding-left: 20px;
-    }
-    
-    .nested-list li {
-        margin-bottom: 10px;
-        position: relative;
-        padding-left: 20px;
-    }
-    
-    .nested-list li:before {
-        content: '•';
-        position: absolute;
-        left: 0;
-        color: #3498db;
+    @keyframes gradientShift {
+        0% { background: linear-gradient(135deg, #667eea, #764ba2); }
+        100% { background: linear-gradient(135deg, #f093fb, #f5576c); }
     }
 
-    /* 高亮文本样式 */
-    .highlight {
-        color: #3498db;
-        font-weight: 600;
+    .conclusion-box p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin: 0;
+        color: white;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     }
 
     /* 响应式样式 */
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1024px) {
         .main-box {
-            margin: 50px 100px;
+            margin: 30px 50px;
+            padding: 40px;
         }
     }
-    
-    @media only screen and (max-width: 992px) {
-        .main-box {
-            margin: 50px 50px;
-            padding: 30px;
-        }
-    }
-    
-    @media only screen and (max-width: 767px) {
+
+    @media only screen and (max-width: 768px) {
         .project-title {
             font-size: 2rem;
+        }
+        
+        .main-box {
+            margin: 20px;
+            padding: 30px;
         }
         
         .section-heading {
             font-size: 1.5rem;
         }
         
-        .main-box {
-            margin: 30px 20px;
-            padding: 25px 20px;
-        }
-        
         .application-area {
-            padding: 15px;
-        }
-    }
-    
-    @media only screen and (max-width: 480px) {
-        .project-title {
-            font-size: 1.75rem;
-        }
-        
-        .section-heading {
-            font-size: 1.35rem;
+            padding: 20px;
         }
         
         .app-heading {
             font-size: 1.2rem;
         }
     }
-    
-    /* 结论特别样式 */
-    .project-section:last-child {
-        background: linear-gradient(to right, rgba(52, 152, 219, 0.05), rgba(41, 128, 185, 0.1));
-        border-left: 5px solid #e67e22;
+
+    @media only screen and (max-width: 480px) {
+        .project-title {
+            font-size: 1.75rem;
+            letter-spacing: 1px;
+        }
+        
+        .main-box {
+            padding: 20px;
+        }
+        
+        .application-area {
+            padding: 15px;
+        }
+        
+        .conclusion-box {
+            padding: 25px;
+        }
     }
-    
-    .conclusion-box {
-        background: linear-gradient(to right, #f1f9ff, #e1f5fe);
-        padding: 25px;
-        border-radius: 10px;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
-        border-left: 4px solid #3498db;
+
+    /* 移除平滑滚动以防止窗口自动移动 */
+    html {
+        scroll-behavior: auto;
     }
-    
-    .conclusion-box:before {
-        content: "\201C";
-        position: absolute;
-        top: -20px;
-        left: 10px;
-        font-size: 150px;
-        font-family: Georgia, serif;
-        color: rgba(52, 152, 219, 0.1);
-        line-height: 1;
-    }
-    
-    /* 图像样式保留 */
-    .img-fluid {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        margin-bottom: 15px;
-    }
-    
-    .image-caption {
-        color: #7f8c8d;
-        font-size: 14px;
-        font-style: italic;
-        text-align: center;
-        margin: 0 0 20px 0;
-    }
-    
-    /* 创建交互式元素 */
-    .project-section:target {
-        animation: highlight 1.5s ease;
-    }
-    
-    @keyframes highlight {
-        0% { background-color: rgba(52, 152, 219, 0.2); }
-        100% { background-color: rgba(248, 249, 250, 0.7); }
+
+    /* 加载动画 */
+    .main-box * {
+        animation-fill-mode: both;
     }
 </style>
 
