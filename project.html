@@ -25,7 +25,12 @@
 
 <body>
     <!-- 加载进度条 -->
-    <div class="loading-bar"></div>
+    <div class="loading-bar">
+        <div class="loading-progress"></div>
+    </div>
+
+    <!-- 粒子背景系统 -->
+    <div class="particles"></div>
 
     <div id="preloader">
         <div class="loader">
@@ -323,18 +328,8 @@
                 }, 300);
             });
            
-            // 项目章节的进入动画
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-in');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            $('.project-section').each(function() {
-                observer.observe(this);
-            });
+            // 项目章节的进入动画已移除
+            // 保持原有的视觉效果，不再使用IntersectionObserver
 
             // 列表项的动画延迟
             $('.feature-list li, .innovation-list li, .impact-list li').each(function(index) {
@@ -409,20 +404,7 @@
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
-        .animate-in {
-            animation: slideInScale 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
-        }
-
-        @keyframes slideInScale {
-            from {
-                opacity: 0;
-                transform: translateY(30px) scale(0.95);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+        /* 移除了滚动触发的animate-in动画效果 */
 
         /* 额外的悬停效果 */
         .toc-link:hover .toc-icon {
@@ -1047,7 +1029,7 @@
         }
     }
 
-    /* 滚动动画 */
+    /* 滚动动画 - 已简化，移除IntersectionObserver相关效果 */
     .project-section:target {
         animation: highlightTarget 2s ease-in-out;
     }
@@ -1076,6 +1058,207 @@
     .project-section:hover {
         transform: translateY(-8px) rotateX(2deg);
     }
+    
+    /* === des_1风格的粒子动画样式 === */
+    :root {
+        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        --success-color: #00d4aa;
+        --warning-color: #ffc107;
+        --glass-bg: rgba(255, 255, 255, 0.1);
+        --glass-border: rgba(255, 255, 255, 0.18);
+        --text-primary: #ffffff;
+        --text-secondary: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* body背景增强 */
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.2) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: -1;
+    }
+    
+    /* des_1风格粒子效果 */
+    .particles {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .particle {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: #00d4ff;
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite, colorShift 8s ease-in-out infinite;
+        opacity: 0.6;
+        box-shadow: 0 0 4px #00d4ff;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+        50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+    }
+
+    @keyframes colorShift {
+        0% { background: #00d4ff; box-shadow: 0 0 4px #00d4ff; }
+        33% { background: #00ff88; box-shadow: 0 0 4px #00ff88; }
+        66% { background: #ffaa00; box-shadow: 0 0 4px #ffaa00; }
+        100% { background: #00d4ff; box-shadow: 0 0 4px #00d4ff; }
+    }
+
+    /* 加载进度条增强 */
+    .loading-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 10000;
+        transition: opacity 0.5s ease;
+    }
+
+    .loading-progress {
+        height: 100%;
+        background: var(--primary-gradient);
+        width: 0%;
+        transition: width 0.3s ease;
+        box-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+    }
+
+    /* 页面加载状态管理 */
+    body:not(.loaded) .main-box {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    body.loaded .main-box {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* 悬浮增强效果 */
+    .inner-box::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .inner-box:hover::after {
+        opacity: 1;
+        animation: shimmer 1.5s ease-in-out;
+    }
+
+    @keyframes shimmer {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
+
+    /* 响应式粒子优化 */
+    @media (max-width: 768px) {
+        .particles .particle {
+            animation-duration: 4s;
+        }
+    }
+
+    /* 文本选择样式 */
+    ::selection {
+        background: rgba(102, 126, 234, 0.3);
+        color: var(--text-primary);
+    }
+
+    ::-moz-selection {
+        background: rgba(102, 126, 234, 0.3);
+        color: var(--text-primary);
+    }
+
+    /* 减少动画偏好支持 */
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+        
+        .particle {
+            animation: none;
+        }
+    }
 </style>
+
+<script>
+// des_1风格的页面加载动画管理
+document.addEventListener('DOMContentLoaded', function() {
+    // 创建粒子系统 (des_1风格)
+    function createParticles() {
+        const particlesContainer = document.querySelector('.particles');
+        const particleCount = 50;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 6 + 's';
+            particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            particlesContainer.appendChild(particle);
+        }
+    }
+
+    // 加载进度条动画
+    function initLoadingBar() {
+        const loadingProgress = document.querySelector('.loading-progress');
+        let progress = 0;
+        
+        const loadingInterval = setInterval(() => {
+            progress += Math.random() * 30;
+            if (progress >= 100) {
+                progress = 100;
+                clearInterval(loadingInterval);
+                setTimeout(() => {
+                    document.querySelector('.loading-bar').style.opacity = '0';
+                    setTimeout(() => {
+                        document.querySelector('.loading-bar').style.display = 'none';
+                        document.body.classList.add('loaded');
+                    }, 500);
+                }, 200);
+            }
+            loadingProgress.style.width = progress + '%';
+        }, 100);
+    }
+    
+    // 初始化所有功能
+    createParticles();
+    initLoadingBar();
+    
+    // 页面加载完成后的动画
+    window.addEventListener('load', () => {
+        // des_1风格的平滑加载完成
+    });
+});
+</script>
 
 </html>
