@@ -44,6 +44,11 @@
                     <div class="col-lg-8 col-md-6 col-xl-8">
                         <div class="header">
                             <div class="header-main">
+                                <div class="navbar-logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/icon.png" alt="Logo">
+                                    </a>
+                                </div>
                                 <div class="open-nav-menu">
                                     <span></span>
                                 </div>
@@ -59,11 +64,10 @@
                                         <li class="menu-iteam menu-iteam-has-childrean"><a href="des_1.html"
                                                 data-toggle="submenu">Design<i class="plus"></i></a>
                                             <ul class="submenu">
-                                                <li class="menu-iteam"><a href="des_1.html">Inspiration</a></li>
-                                                <li class="menu-iteam"><a href="des_2.html">Algorithm design</a></li>
-                                                <li class="menu-iteam"><a href="des_3.html">Molecular Structure Design</a></li>
-                                                <li class="menu-iteam"><a href="des_4.html">Characterization</a></li>
-                                                <li class="menu-iteam"><a href="des_5.html">Technology Industrial Chain Design</a></li>
+                                                <li class="menu-iteam"><a href="des_1.html">Design Inspiration</a></li>
+                                                <li class="menu-iteam"><a href="des_2.html">Encoding Algorithm</a></li>
+                                                <li class="menu-iteam"><a href="des_3.html">Molecular Architecture</a></li>
+                                                <li class="menu-iteam"><a href="des_4.html">Industrial Ecosystem</a></li>
                                             </ul>
                                         </li>
                                         <li class="menu-iteam menu-iteam-has-childrean"><a href="exp_1.html"
@@ -143,20 +147,21 @@
         <div class="project-section" id="legal">
             <h3 class="section-heading">Legal Issues</h3>
             <p>
-                The Cartagena Protocol on Biosafety, adopted under the United Nations Convention on Biological Diversity, regulates the transboundary movement, handling, and use of living modified organisms (LMOs), and requires parties to exercise caution regarding potential ecological and health risks. The HeliCipher uses artificially synthesized short DNA fragments and is encapsulated in silica, which are non-viable, lack biological activity, and cannot replicate or spread in the environment; therefore, they do not fall within the scope of LMOs regulated by the Protocol.
+                The Cartagena Protocol on Biosafety, adopted under the United Nations Convention on Biological Diversity, regulates the transboundary movement, handling, and use of living modified organisms (LMOs), and requires parties to exercise caution regarding potential ecological and health risks. The HeliCipher uses artificially synthesized short DNA fragments that are encapsulated in silica, which are non-viable, lack biological activity, and cannot replicate or spread in the environment; therefore, they do not fall within the scope of LMOs regulated by the Protocol.
             </p>
+        </div>
+
+        <div class="project-section" id="data-compliance">
+            <h3 class="section-heading">Data compliance issues</h3>
             <p>
-                Issues of data compliance are also considered. The General Data Protection Regulation (GDPR) of the European Union imposes requirements on the lawful collection, processing, and cross-border transfer of personal data, while China's Data Security Law mandates classified protection of data related to national security and public interest, as well as security assessments for cross-border data flows. The HeliCipher are designed solely for storing encrypted anti-counterfeiting information and do not involve personal or sensitive state data. In potential cross-border applications, the project follows the principles of data minimization and necessity, with plans to establish transparent encryption records and third-party verification mechanisms to prevent unlawful storage or transmission.
+                Data compliance issues are also considered. The General Data Protection Regulation (GDPR) of the European Union imposes requirements on the lawful collection, processing, and cross-border transfer of personal data, while China's Data Security Law mandates the classified protection of data related to national security and public interest, as well as security assessments for cross-border data flows. The HeliCipher is designed solely for storing encrypted anti-counterfeiting information and does not involve personal or sensitive state data. In potential cross-border applications, the project follows the principles of data minimization and necessity, with plans to establish transparent encryption records and third-party verification mechanisms to prevent unlawful storage or transmission.
             </p>
         </div>
 
         <div class="project-section" id="social">
             <h3 class="section-heading">Social Issues</h3>
             <p>
-                At the social level, issues of consumer trust and the right to know are considered important for the adoption of our DNA-based anti-counterfeiting technologies. Although the HeliCipher consist only of synthetically produced, non-functional DNA encapsulated in stable polymeric materials and applied externally to product packaging, the presence of "DNA" labeling may lead to public misunderstanding or concern. Some consumers might associate such labeling with genetically modified food or genetic data privacy, potentially affecting acceptance.
-            </p>
-            <p>
-                To address this, clear product labeling and transparent information mechanisms have been proposed, aimed at clarifying that the molecules are used solely for authentication purposes and pose no health or environmental risks. Public outreach and science communication are also recommended to improve understanding of the technology and strengthen consumer confidence.
+                At the social level, issues of consumer trust and the right to know are considered important for adopting DNA-based anti-counterfeiting technologies. Although the HeliCipher consists only of synthetically produced, non-functional DNA encapsulated in stable polymeric materials and applied externally to product packaging, the presence of "DNA" labeling may lead to public misunderstanding or concern. Some consumers may associate such labeling with genetically modified foods or genetic data privacy, potentially affecting acceptance. To address this, clear product labeling and transparent information mechanisms have been proposed, to clarify that these molecules are used solely for authentication purposes and pose no health or environmental risks. Public outreach and science communication are also recommended to improve understanding of the technology and strengthen consumer confidence.
             </p>
         </div>
     </div>
@@ -426,6 +431,41 @@
     .full-nav1:hover {
         background: rgba(15, 23, 42, 0.95);
         box-shadow: var(--shadow-colored);
+    }
+
+    /* 导航栏图标样式 */
+    .navbar-logo {
+        display: inline-block;
+        margin-right: 30px;
+        vertical-align: middle;
+        order: -1; /* 确保图标在最左侧 */
+    }
+
+    .navbar-logo a {
+        display: inline-block;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .navbar-logo a:hover {
+        opacity: 0.8;
+    }
+
+    .navbar-logo img {
+        height: 40px;
+        width: auto;
+        transition: transform 0.3s ease;
+        vertical-align: middle;
+    }
+
+    .navbar-logo img:hover {
+        transform: scale(1.05);
+    }
+
+    .header-main {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
 
 

@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>wiki</title>
-	<link rel="icon" href="assets/img/icon2.png" type="image/gif" sizes="16x16">
-	<link rel="icon" href="assets/img/icon2.png" type="image/gif" sizes="18x18">
-	<link rel="icon" href="assets/img/icon2.png" type="image/gif" sizes="20x20">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMU-HeliCipher - DNA Authentication Technology</title>
+    <link rel="icon" href="assets/img/icon.png" type="image/png">
 
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<link rel="stylesheet" href="assets/css/magnific-popup.css">
-	<link rel="stylesheet" href="assets/css/normalize.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-
-
-    <div id="preloader">
+    <!-- Preloader - 已禁用 -->
+    <div id="preloader" style="display: none;">
         <div class="loader">
             <span class="loader-inner-1"></span>
             <span class="loader-inner-2"></span>
@@ -33,10 +30,21 @@
             <span class="loader-inner-4"></span>
         </div>
     </div>
+
+    <!-- Scroll to Top -->
     <div class="scroll-area">
         <i class="fa fa-angle-up"></i>
     </div>
-    <!-- navbar  -->
+
+    <!-- 粒子效果容器 -->
+    <div class="particles"></div>
+
+    <!-- 加载进度条 -->
+    <div class="loading-bar">
+        <div class="loading-progress"></div>
+    </div>
+
+    <!-- Navigation -->
     <div class="navbar-area1">
         <div class="full-nav1">
             <div class="container">
@@ -44,1114 +52,3387 @@
                     <div class="col-lg-8 col-md-6 col-xl-8">
                         <div class="header">
                             <div class="header-main">
+                                <div class="navbar-logo">
+                                    <a href="index_new.html">
+                                        <img src="assets/img/icon.png" alt="XMU-HeliCipher Logo">
+                                    </a>
+                                </div>
                                 <div class="open-nav-menu">
                                     <span></span>
                                 </div>
                                 <div class="menu-overly"></div>
                                 <nav class="nav-menu">
                                     <div class="close-nav-menu">
-                                        <img src="assets/img/cross.png" alt="icon">
+                                        <img src="assets/img/cross.png" alt="Close">
                                     </div>
                                     <ul class="menu">
-                                        <li class="menu-iteam"><a href="index.html">Home</a></li>
+                                        <li class="menu-iteam"><a href="index_new.html" class="active">Home</a></li>
                                         <li class="menu-iteam"><a href="project.html">Project</a></li>
-
-                                        <li class="menu-iteam menu-iteam-has-childrean"><a href="des_1.html"
-                                                data-toggle="submenu">Design<i class="plus"></i></a>
+                                        <li class="menu-iteam menu-iteam-has-childrean">
+                                            <a href="des_1.html" data-toggle="submenu">Design<i class="plus"></i></a>
                                             <ul class="submenu">
-                                                <li class="menu-iteam"><a href="des_1.html">Inspiration</a></li>
-                                                <li class="menu-iteam"><a href="des_2.html">Algorithm design</a></li>
-                                                <li class="menu-iteam"><a href="des_3.html">Molecular Structure Design</a></li>
-                                                <li class="menu-iteam"><a href="des_4.html">Characterization</a></li>
-                                                <li class="menu-iteam"><a href="des_5.html">Technology Industrial Chain Design</a></li>
+                                                <li class="menu-iteam"><a href="des_1.html">Design Inspiration</a></li>
+                                                <li class="menu-iteam"><a href="des_2.html">Encoding Algorithm</a></li>
+                                                <li class="menu-iteam"><a href="des_3.html">Molecular Architecture</a>
+                                                </li>
+                                                <li class="menu-iteam"><a href="des_4.html">Industrial Ecosystem</a>
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-iteam menu-iteam-has-childrean"><a href="exp_1.html"
-                                                data-toggle="submenu">Experiment<i class="plus"></i></a>
+                                        <li class="menu-iteam menu-iteam-has-childrean">
+                                            <a href="exp_1.html" data-toggle="submenu">Experiment<i
+                                                    class="plus"></i></a>
                                             <ul class="submenu">
-                                                <li class="menu-iteam"><a href="exp_1.html">DNA base encoding</a></li>
+                                                <li class="menu-iteam"><a href="exp_1.html">DNA Base Encoding</a></li>
                                                 <li class="menu-iteam"><a href="exp_2.html">Anti-Counterfeiting Plasmid
                                                         Construction</a></li>
-                                                <li class="menu-iteam"><a href="exp_3.html">DNA product
-                                                        encapsulation</a></li>
-                                                <li class="menu-iteam"><a href="exp_4.html">Product information
-                                                        decoding</a></li>
-                                                <li class="menu-iteam"><a href="exp_5.html">Sample stability
-                                                        assessment</a></li>
+                                                <li class="menu-iteam"><a href="exp_3.html">DNA Product
+                                                        Encapsulation</a></li>
+                                                <li class="menu-iteam"><a href="exp_4.html">Product Information
+                                                        Decoding</a></li>
+                                                <li class="menu-iteam"><a href="exp_5.html">Sample Stability
+                                                        Assessment</a></li>
                                             </ul>
                                         </li>
-
-
                                         <li class="menu-iteam"><a href="elsi.html">ELSI</a></li>
-
                                         <li class="menu-iteam"><a href="team.html">Team</a></li>
-
                                         <li class="menu-iteam"><a href="future.html">Future</a></li>
-
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
-	<!-- header-area-end -->
-	
-	<!-- banner  -->
-	<div class="banner-area">
-		<div class="home-shape">
-			<div class="shape1"><img src="assets/img/shape/shape1.png" alt="shape"></div>
-			<div class="shape2"><img src="assets/img/shape/shape2.png" alt="shape">
-			</div>
-			<div class="shape3"><img src="assets/img/shape/shape3.png" alt="shape">
-			</div>
-			<div class="shape4"><img src="assets/img/shape/shape4.png" alt="shape">
-			</div>
-			<div class="shape5"><img src="assets/img/shape/shape5.png" alt="shape">
-			</div>
-		</div>
-		<div class="container-fluid">
-			<div class="row align-self-center">
-				<div class="col-lg-6">
-					<div class="banner-content">
-						<h2>Trusted Effective Service and Solutions</h2>
-						<p>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Asperiores dignissimos neque,orem
-							ipsum dolor, sit, amet consectetur adipisicing elit. Asperiores dignissimos neque, </p>
-						<div class="banner-btn">
-							<div class="nav-btn">
-								<a class="box-btn" href="#">learn more</a>
-							</div>
-							<div class="nav-btn nav-btn-2">
-								<a class="box-btn" href="#">Contact us</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="banner-img">
-						<img src="assets/img/Home1/bn2.png" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- serveice-section -->
 
-	<!-- Services Section with CORRECTED Links & Titles -->
-	<section class="services-section">
-		<div class="container">
-			<h2>World Best IT-Serviceswe Provide</h2>
-			<p class="section-subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit
-				excepturi dolore maiores quaerat ullam suscipit ipsa suscipit aiores quaerat ullam suscipit ipsa
-				suscipit</p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="dna-animation"></div>
+            <div class="floating-particles"></div>
+        </div>
 
-			<div class="services-grid">
-				<!-- Card 1: Links to Projection -->
-				<a href="project.html" class="service-card">
-					<div class="card-content">
-						<div class="card-icon"><i class="fas fa-chart-line"></i></div>
-						<h3>Projection</h3>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
-							numquam, met consectetur adipisicing</p>
-						<span class="read-more">Read more</span>
-					</div>
-				</a>
+        <div class="container-fluid">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 col-md-12">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span>🧬 XMU-HeliCipher Technology</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Redefining <span class="gradient-text">Authenticity</span>,<br>
+                            with <span class="gradient-text">Nature's</span> Ultimate Proof
+                        </h1>
+                        <p class="hero-description">
+                            Our innovation is inspired by the wisdom of nature, utilizing the very molecule
+                            that makes every organism unique: <strong>DNA</strong>. XMU-HeliCipher encodes product
+                            identity into unclonable, stable DNA markers, ensuring its authenticity is as
+                            verifiable and unique as a natural fingerprint.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="project.html" class="btn-primary">
+                                <i class="fas fa-rocket"></i>
+                                Explore Project
+                            </a>
+                            <a href="exp_1.html" class="btn-secondary">
+                                <i class="fas fa-flask"></i>
+                                View Experiments
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">99.9%</span>
+                                <span class="stat-label">Accuracy</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">Unbreakable</span>
+                                <span class="stat-label">Security</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">Nature-Based</span>
+                                <span class="stat-label">Technology</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="hero-visual">
+                        <div class="main-image-container">
+                            <img src="assets/img/home/1.png" alt="DNA Authentication Technology" class="main-image">
+                            <div class="image-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- Card 2: Links to Design -->
-				<a href="solutions.html" class="service-card">
-					<div class="card-content">
-						<div class="card-icon"><i class="fas fa-palette"></i></div>
-						<h3>Design</h3>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
-							numquam, met consectetur adipisicing</p>
-						<span class="read-more">Read more</span>
-					</div>
-				</a>
+    <!-- Technology Overview Section -->
+    <section class="tech-overview-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 order-lg-1 order-2">
+                    <div class="tech-content">
+                        <h2 class="section-title">XMU-HeliCipher Technology</h2>
+                        <p class="section-description">
+                            XMU-HeliCipher encodes product identity into unclonable, stable DNA markers,
+                            ensuring its authenticity is as verifiable and unique as a natural fingerprint.
+                        </p>
+                        <div class="tech-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-dna"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>DNA Encoding</h4>
+                                    <p>Synthetic DNA markers create unique, unclonable identifiers</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Amplified & Protected</h4>
+                                    <p>DNA is amplified, encapsulated for protection, and integrated into products</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Easy Verification</h4>
+                                    <p>From quick checks to lab sequencing - authentication made simple</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 order-lg-2 order-1">
+                    <div class="tech-visual">
+                        <div class="tech-image-container">
+                            <img src="assets/img/home/2.jpg" alt="Anti-Counterfeiting Technology" class="tech-image">
+                            <div class="tech-overlay">
+                                <div class="pulse-ring"></div>
+                                <div class="tech-badge">
+                                    <i class="fas fa-microscope"></i>
+                                    <span>Lab Verified</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<!-- Card 3: Links to Experiment -->
-				<a href="exp_1.html" class="service-card">
-					<div class="card-content">
-						<div class="card-icon"><i class="fas fa-flask"></i></div>
-						<h3>Experiment</h3>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
-							numquam, met consectetur adipisicing</p>
-						<span class="read-more">Read more</span>
-					</div>
-				</a>
+    <!-- Problem & Solution Section -->
+    <section class="problem-solution-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Addressing Global Challenges</h2>
+                <p class="section-subtitle">
+                    Revolutionizing anti-counterfeiting with biomolecular design
+                </p>
+            </div>
 
-				<!-- Card 4: Links to ELSI -->
-				<a href="elsi.html" class="service-card">
-					<div class="card-content">
-						<div class="card-icon"><i class="fas fa-balance-scale"></i></div>
-						<h3>ELSI</h3>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
-							numquam, met consectetur adipisicing</p>
-						<span class="read-more">Read more</span>
-					</div>
-				</a>
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="problem-card">
+                        <div class="card-header">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>The Problem</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>
+                                Counterfeit products pose severe global economic and safety challenges,
+                                with existing authentication technologies such as QR codes and RFID tags
+                                often lacking sufficient security, durability, and accessibility.
+                            </p>
+                            <ul class="problem-list">
+                                <li><i class="fas fa-times"></i> Easily replicated technologies</li>
+                                <li><i class="fas fa-times"></i> Limited security features</li>
+                                <li><i class="fas fa-times"></i> Poor durability</li>
+                                <li><i class="fas fa-times"></i> Complex verification processes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- Card 5: Links to Team -->
-				<a href="team.html" class="service-card">
-					<div class="card-content">
-						<div class="card-icon"><i class="fas fa-users"></i></div>
-						<h3>Team</h3>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
-							numquam, met consectetur adipisicing</p>
-						<span class="read-more">Read more</span>
-					</div>
-				</a>
+                <div class="col-lg-6 col-md-12">
+                    <div class="solution-card">
+                        <div class="card-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Our Solution</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>
+                                We present XMU-HeliCipher, an innovative anti-counterfeiting platform
+                                grounded in biomolecular design. We are redefining authenticity with
+                                nature's ultimate proof.
+                            </p>
+                            <ul class="solution-list">
+                                <li><i class="fas fa-check"></i> Unclonable DNA markers</li>
+                                <li><i class="fas fa-check"></i> Military-grade security</li>
+                                <li><i class="fas fa-check"></i> Superior stability</li>
+                                <li><i class="fas fa-check"></i> Multiple verification levels</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section with CORRECTED Links & Titles -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Explore Our Research Areas</h2>
+                <p class="section-subtitle">
+                    Discover the key components of XMU-HeliCipher's revolutionary DNA authentication technology
+                </p>
+            </div>
+            <div class="services-grid">
+                <!-- Card 1: Links to Projection -->
+                <a href="project.html" class="service-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Projection</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
+                            numquam, met consectetur adipisicing</p>
+                        <span class="read-more">Read more</span>
+                    </div>
+                </a>
 
-				<!-- Card 6: Links to Future -->
-				<a href="future.html" class="service-card">
-					<div class="card-content">
-						<div class="card-icon"><i class="fas fa-rocket"></i></div>
-						<h3>Future</h3>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
-							numquam, met consectetur adipisicing</p>
-						<span class="read-more">Read more</span>
-					</div>
-				</a>
-			</div>
-		</div>
-	</section>
-	<!-- Services Section End -->
-	<!-- company-area -->
-	<!-- <section class="company-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 order-2 order-lg-1">
-					<div class="company-title">
-						<span>Our Company</span>
-						<h2>Best IT-Solutions company near the world</h2>
-						<p>Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna
-							aliqua enim ad minim veniam quis nostrud exercitation ulac.Dolor sit amet consectetur elit
-							sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam quis
-							nostrud exercitation ulac</p>
+                <!-- Card 2: Links to Design -->
+                <a href="des_1.html" class="service-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-palette"></i></div>
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
+                            numquam, met consectetur adipisicing</p>
+                        <span class="read-more">Read more</span>
+                    </div>
+                </a>
 
-						<p>Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna
-							aliqua enim ad minim veniam quis nostrud exercitation ulac</p>
-						<div class="nav-btn btn-2nd">
-							<a class="box-btn" href="#">Contact us</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 order-1 order-lg-2">
-					<div class="company-img">
-						<img src="assets/img/home1/4300580.jpg" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- choose-us-area -->
-	<!-- <section class="choose-area section-padding">
-		<div class="container">
-			<div class="row ">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>We Achieved People’s Trust by Our Great Service</h2>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-							dolore maiores quaerat ullam suscipit ipsa suscipit aiores quaerat ullam suscipit ipsa
-							suscipit</p>
-					</div>
-				</div>
-			</div>
-			<div class="row pt-60">
-				<div class="col-lg-6">
-					<div class="choose-img">
-						<img src="assets/img/home1/choose-img.png" alt="2636676">
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="choose-content">
-						<div class="accordion accordion-flush" id="accordionFlushExample">
-							<div class="accordion-item">
-								<h2 class="accordion-header" id="flush-headingOne">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-										data-bs-target="#flush-collapseOne" aria-expanded="false"
-										aria-controls="flush-collapseOne">
-										Best Quality Service
-									</button>
-								</h2>
-								<div id="flush-collapseOne" class="accordion-collapse show collapse"
-									aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-									<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit. Vel, quae quos laudantium, optio deleniti ab esse aut vitae nisi libero
-										eos atque itaque voluptate, repellat ea! Aliquam facere, quidem nostrum.Lorem
-										ipsum dolor sit amet, consectetur adipisicing elit. </div>
-								</div>
-							</div>
-							<div class="accordion-item">
-								<h2 class="accordion-header" id="flush-headingTwo">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-										data-bs-target="#flush-collapseTwo" aria-expanded="false"
-										aria-controls="flush-collapseTwo">
-										Update Technology
-									</button>
-								</h2>
-								<div id="flush-collapseTwo" class="accordion-collapse collapse"
-									aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-									<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit. Vel, quae quos laudantium, optio deleniti ab esse aut vitae nisi libero
-										eos atque itaque voluptate, repellat ea! Aliquam facere, quidem nostrum.Lorem
-										ipsum dolor sit amet, consectetur adipisicing elit. Vel</div>
-								</div>
-							</div>
-							<div class="accordion-item">
-								<h2 class="accordion-header" id="flush-headingfour">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-										data-bs-target="#flush-collapsefour" aria-expanded="false"
-										aria-controls="flush-collapsefour">
-										Best Quality Service
-									</button>
-								</h2>
-								<div id="flush-collapsefour" class="accordion-collapse  collapse"
-									aria-labelledby="flush-headingfour" data-bs-parent="#accordionFlushExample">
-									<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit. Vel, quae quos laudantium, optio deleniti ab esse aut vitae nisi libero
-										eos atque itaque voluptate, repellat ea! Aliquam facere, quidem nostrum.Lorem
-										ipsum dolor sit amet, consectetur adipisicing elit. Vel </div>
-								</div>
-							</div>
-							<div class="accordion-item">
-								<h2 class="accordion-header" id="flush-headingThree">
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-										data-bs-target="#flush-collapseThree" aria-expanded="false"
-										aria-controls="flush-collapseThree">
-										Experienced Team
-									</button>
-								</h2>
-								<div id="flush-collapseThree" class="accordion-collapse  collapse"
-									aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-									<div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing
-										elit. Vel, quae quos laudantium, optio deleniti ab esse aut vitae nisi libero
-										eos atque itaque voluptate, repellat ea! Aliquam facere, quidemLorem ipsum dolor
-										sit amet, consectetur adipisicing elit. Vel, quae quos </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!--  working-area -->
-	<!-- <section class="working-area section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2 class="text-white">We are popular because of our way of working</h2>
-						<p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet
-							odit excepturi dolore maiores quaerat ullam suscipit ipsa suscipit aiores quaerat ullam
-							suscipit ipsa suscipit</p>
-					</div>
-				</div>
-			</div>
-			<div class="row pt-60">
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="single-process">
-						<div class="icon-img">
-							<img src="assets/img/service/2.png" alt="">
-						</div>
-						<div class="process-content">
-							<h3>Development</h3>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, totam tempore rem modi
-								similique</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="single-process">
-						<div class="icon-img">
-							<img src="assets/img/service/3.png" alt="">
-						</div>
-						<div class="process-content">
-							<h3>Refress Product</h3>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, totam tempore rem modi
-								similique </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="single-process">
-						<div class="icon-img">
-							<img src="assets/img/service/5.png" alt="">
-						</div>
-						<div class="process-content">
-							<h3>User Testing</h3>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, totam tempore rem modi
-								similique </p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="single-process">
-						<div class="icon-img">
-							<img src="assets/img/service/6.png" alt="">
-						</div>
-						<div class="process-content">
-							<h3>product Handover</h3>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, totam tempore rem modi
-								similique </p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- loking area -->
-	<!-- <section class="looking-area section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>Have A Look Our Work Show Case</h2>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-							dolore maiores quaerat ullam suscipit ipsa suscipit aiores quaerat ullam suscipit ipsa
-							suscipit</p>
-					</div>
-				</div>
-			</div>
-			<div class="row pt-20">
-				<div class="col-lg-4 col-md-6">
-					<div class="looking-single ">
-						<div class="looking-img">
-							<img src="assets/img/look/1.jpg" alt="jpg">
-						</div>
-						<div class="looking-content">
-							<h3>App UX Studies & Development Case</h3>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-								dolore maiores . </p>
-							<a href="#">view porject details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="looking-single ">
-						<div class="looking-img">
-							<img src="assets/img/look/2.jpg" alt="jpg">
-						</div>
-						<div class="looking-content">
-							<h3>Management App & Web Developing</h3>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-								dolore maiores . </p>
-							<a href="#">view porject details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="looking-single ">
-						<div class="looking-img">
-							<img src="assets/img/look/3.jpg" alt="jpg">
-						</div>
-						<div class="looking-content">
-							<h3>Temperature App UX & Development</h3>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-								dolore maiores . </p>
-							<a href="#">view porject details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="looking-single ">
-						<div class="looking-img">
-							<img src="assets/img/look/5.jpg" alt="jpg">
-						</div>
-						<div class="looking-content">
-							<h3>Management & Web Developing</h3>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-								dolore maiores . </p>
-							<a href="#">view porject details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="looking-single ">
-						<div class="looking-img">
-							<img src="assets/img/look/6.jpg" alt="jpg">
-						</div>
-						<div class="looking-content">
-							<h3>Joe’s Company Development Case</h3>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-								dolore maiores . </p>
-							<a href="#">view porject details</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="looking-single ">
-						<div class="looking-img">
-							<img src="assets/img/look/1.jpg" alt="jpg">
-						</div>
-						<div class="looking-content">
-							<h3>It software company and development</h3>
-							<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-								dolore maiores . </p>
-							<a href="#">view porject details</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="more-text">
-						<h6>We Have More Amazing Case<a href="">View More</a></h6>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- features-area -->
-	<!-- <section class="features-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 order-2 order-lg-1">
-					<div class="company-title">
-						<span>Featurse</span>
-						<h2>We Have Also Features by Zomo</h2>
-						<p>Dolor sit amet consectetur elit sed do eiusmod tempor incididunt labore et dolore magna
-							aliqua enim ad minim veniam quis nostrud exercitation ulac</p>
-						<ul class="Features-nav">
-							<li><i class="fas fa-check"></i>Freelancing Traning Course</li>
-							<li><i class="fas fa-check"></i>Tecnology Consultion</li>
-							<li><i class="fas fa-check"></i>Monthly Workspace</li>
-							<li><i class="fas fa-check"></i>Digital Marketin</li>
-							<li><i class="fas fa-check"></i>It Learning</li>
-						</ul>
-					</div>
-					<div class="nav-btn btn-2nd">
-						<a class="box-btn" href="#">Lets Talk</a>
-					</div>
-				</div>
-				<div class="col-lg-6 order-1 order-lg-2">
-					<div class="company-img">
-						<img src="assets/img/home1/5532827.jpg" alt="">
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- team area -->
-	<!-- <section class="team-area section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>People Who Are Behind Achivment</h2>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-							dolore maiores quaerat ullam suscipit ipsa suscipit aiores quaerat ullam suscipit ipsa
-							suscipit</p>
-					</div>
-				</div>
-			</div>
-			<div class="row pt-60">
-				<div class="team-slider owl-carousel owl-theme">
-					<div class="team-box">
-						<div class="img">
-							<img src="assets/img/team/1.jpg" alt="1">
-						</div>
-						<div class="overly"></div>
-						<div class="overly2"></div>
-						<div class="text">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							<h2>Jhon Abra</h2>
-							<p>Full Stack Developer</p>
-							<ul class="team-social">
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-							</ul>
-						</div>
-					</div>
+                <!-- Card 3: Links to Experiment -->
+                <a href="exp_1.html" class="service-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-flask"></i></div>
+                        <h3>Experiment</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
+                            numquam, met consectetur adipisicing</p>
+                        <span class="read-more">Read more</span>
+                    </div>
+                </a>
 
+                <!-- Card 4: Links to ELSI -->
+                <a href="elsi.html" class="service-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                        <h3>ELSI</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
+                            numquam, met consectetur adipisicing</p>
+                        <span class="read-more">Read more</span>
+                    </div>
+                </a>
 
-					<div class="team-box">
-						<div class="img">
-							<img src="assets/img/team/2.jpg" alt="1">
-						</div>
-						<div class="overly"></div>
-						<div class="overly2"></div>
-						<div class="text">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							<h2>Alina Garbej</h2>
-							<p>Web Designer</p>
-							<ul class="team-social">
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-							</ul>
-						</div>
-					</div>
+                <!-- Card 5: Links to Team -->
+                <a href="team.html" class="service-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-users"></i></div>
+                        <h3>Team</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
+                            numquam, met consectetur adipisicing</p>
+                        <span class="read-more">Read more</span>
+                    </div>
+                </a>
 
+                <!-- Card 6: Links to Future -->
+                <a href="future.html" class="service-card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                        <h3>Future</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis perspiciatis quas,
+                            numquam, met consectetur adipisicing</p>
+                        <span class="read-more">Read more</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
 
-					<div class="team-box">
-						<div class="img">
-							<img src="assets/img/team/3.jpg" alt="1">
-						</div>
-						<div class="overly"></div>
-						<div class="overly2"></div>
-						<div class="text">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							<h2>Micci Stack</h2>
-							<p>Full Stack Developer</p>
-							<ul class="team-social">
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-							</ul>
-						</div>
-					</div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content text-center">
+                <h2>Ready to Experience the Future of Authentication?</h2>
+                <p>Join us in revolutionizing product authenticity with nature's most secure technology</p>
+                <div class="cta-buttons">
+                    <a href="project.html" class="btn-primary">
+                        <i class="fas fa-arrow-right"></i>
+                        Learn More
+                    </a>
+                    <a href="team.html" class="btn-outline">
+                        <i class="fas fa-users"></i>
+                        Meet Our Team
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					<div class="team-box">
-						<div class="img">
-							<img src="assets/img/team/4.jpg" alt="1">
-						</div>
-						<div class="overly"></div>
-						<div class="overly2"></div>
-						<div class="text">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							<h2>Mithila Jon</h2>
-							<p>Web Designer</p>
-							<ul class="team-social">
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="team-box">
-						<div class="img">
-							<img src="assets/img/team/5.jpg" alt="1">
-						</div>
-						<div class="overly"></div>
-						<div class="overly2"></div>
-						<div class="text">
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							<h2>Andarson</h2>
-							<p>Web Designer</p>
-							<ul class="team-social">
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- client-area -->
-	<!-- <section class="client-area section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>What Our Client’s Say</h2>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-							dolore maiores quaerat ullam suscipit ipsa suscipit aiores quaerat ullam suscipit ipsa
-							suscipit</p>
-					</div>
-				</div>
-			</div>
-			<div class="row pt-40">
-				<div class="client-slider owl-carousel owl-theme">
-					<div class="client-single">
-						<img src="assets/img/client/1.jpg" alt="client">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam pariatur quasi adipisci
-							excepturi aut eaque, quia dolor inventore quibusdam amet harum quae praesentium odio iusto
-							repudiandae maxime, aliquam dolore magnam.
-						</p>
-						<h3>Maxwell</h3>
-						<span>Web Developer</span>
-					</div>
-					<div class="client-single">
-						<img src="assets/img/client/3.jpg" alt="client">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam pariatur quasi adipisci
-							excepturi aut eaque, quia dolor inventore quibusdam amet harum quae praesentium odio iusto
-							repudiandae maxime, aliquam dolore magnam.
-						</p>
-						<h3>Diock Arand</h3>
-						<span>Company Founder</span>
-					</div>
-					<div class="client-single">
-						<img src="assets/img/client/1.jpg" alt="client">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam pariatur quasi adipisci
-							excepturi aut eaque, quia dolor inventore quibusdam amet harum quae praesentium odio iusto
-							repudiandae maxime, aliquam dolore magnam.
-						</p>
-						<h3>Maxwell</h3>
-						<span>Web Developer</span>
-					</div>
-					<div class="client-single">
-						<img src="assets/img/client/2.jpg" alt="client">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam pariatur quasi adipisci
-							excepturi aut eaque, quia dolor inventore quibusdam amet harum quae praesentium odio iusto
-							repudiandae maxime, aliquam dolore magnam.
-						</p>
-						<h3>Jahara Khan</h3>
-						<span>CEO of Company</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- blog-area -->
-	<!-- <section class="blog-area section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2> Our Regular Blog</h2>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-							dolore maiores quaerat ullam suscipit ipsa suscipit aiores quaerat ullam suscipit ipsa
-							suscipit</p>
-					</div>
-				</div>
-			</div>
-			<div class="row pt-60">
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-single">
-						<div class="blog-img">
-							<a href="#"><img src="assets/img/blog/1.jpg" alt="blg"></a>
-						</div>
-						<div class="blog-content">
-							<ul>
-								<li>12 Dec 2021</li>
-								<li><a href="#">By Admin</a></li>
-							</ul>
-							<a href="#">
-								<h3>It Company Development Case</h3>
-							</a>
-							<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quis est, tenetur nulla modi
-								laboriosam, a minus ipsum labore, amet.</p>
-							<a href="#">Read More</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-single">
-						<div class="blog-img">
-							<a href="#"><img src="assets/img/blog/2.jpg" alt="blg"></a>
-						</div>
-						<div class="blog-content">
-							<ul>
-								<li>12 Dec 2021</li>
-								<li><a href="#">By Admin</a></li>
-							</ul>
-							<a href="#">
-								<h3>Joe’s Company Development Case</h3>
-							</a>
-							<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quis est, tenetur nulla modi
-								laboriosam, a minus ipsum labore, amet.</p>
-							<a href="#">Read More</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="blog-single">
-						<div class="blog-img">
-							<a href="#"><img src="assets/img/blog/3.jpg" alt="blg"></a>
-						</div>
-						<div class="blog-content">
-							<ul>
-								<li>12 Dec 2021</li>
-								<li><a href="#">By Admin</a></li>
-							</ul>
-							<a href="#">
-								<h3>It Software Company Design Case</h3>
-							</a>
-							<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Quis est, tenetur nulla modi
-								laboriosam, a minus ipsum labore, amet.</p>
-							<a href="#">Read More</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="more-text">
-						<h6>We Have More Amazing Case<a href="">View More</a></h6>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- contact us -->
-	<!-- <section class="contact-us section-padding">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title">
-						<h2>Let Us Know About Your Project Idea!</h2>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Ex quos eveniet odit excepturi
-							dolore maiores quaerat ullam suscipit ipsa suscipit aiores quaerat ullam suscipit ipsa
-							suscipit</p>
-					</div>
-				</div>
-			</div>
-			<div class="row pt-60">
-				<div class="col-lg-6 col-md-6">
-					<div class="contact-img">
-						<img src="assets/img/home1/8.png" alt="contact">
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6">
-					<div class="contact-form">
-						<form action="#">
-							<div class="row">
-								<div class="col-lg-12">
-									<div class="form-group">
-										<input type="text" class="form-control" required="" placeholder="Name">
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<div class="form-group">
-										<input type="email" class="form-control" required=""
-											placeholder="Enter Email..">
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<div class="form-group">
-										<input type="text" class="form-control" required="" placeholder="Phone">
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<div class="form-group">
-										<input type="text" class="form-control" required="" placeholder="Subject">
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<div class="form-group">
-										<textarea class="form-control" placeholder="Message" rows="5"></textarea>
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<div class="nav-btn text-center">
-										<button class="box-btn">Submit</button>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- footer area -->
-	<!-- <footer class="footer-area">
-		<div class="container">
-			<div class="row pt-40">
-				<div class="col-lg-4 col-md-6">
-					<div class="ft-content">
-						<div class="log">
-							<a href="#"><img src="assets/img/icon2.png" alt="icon"></a>
-						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, porro saepe facilis.
-							Harum ipsam accusantium id dolorum.</p>
-						<div class="subcribe-form">
-							<form action="#">
-								<input type="email" class="form-control" required="" placeholder="Your Email">
-								<div class="nav-btn add-btn">
-									<button class="box-btn">Subscribe</button>
-								</div>
-							</form>
-						</div>
-						<div class="social-nav">
-							<ul>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-								<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="ft-content">
-						<h3>Our Service</h3>
-						<div class="footer-list">
-							<ul>
-								<li><a href="#">Development</a></li>
-								<li><a href="#">Visual Design</a></li>
-								<li><a href="#">QA & Testing</a></li>
-								<li><a href="#">IT Management</a></li>
-								<li><a href="#">Cyber Security</a></li>
-								<li><a href="#">Wireless Connection</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-6">
-					<div class="ft-content">
-						<h3>Quick Links</h3>
-						<div class="footer-list">
-							<ul>
-								<li><a href="#">Service</a></li>
-								<li><a href="#">FAQs</a></li>
-								<li><a href="#">Privacy & Policy</a></li>
-								<li><a href="#">Career</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="#">Data Analysis</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="ft-content">
-						<h3>Contact</h3>
-						<div class="foot-social">
-							<ul>
-								<li><a href="#"><i class="far fa-envelope"></i>hello@zomo.com</a></li>
-								<li><a href="#"><i class="fas fa-mobile-alt"></i>+3849854939</a></li>
-								<li><a href="#"><i class="far fa-envelope"></i>support@zomo.com</a></li>
-								<li><a href="#"><i class="far fa-envelope"></i>hello@zoko.com</a></li>
-								<li><a href="#"><i class="fas fa-map-marker-alt"></i>Flat 20, Reynolds Neck, North Hele
-										naville, FV77 8WS</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row btm-brd">
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<div class="ft-left-btm">
-						<p>&copy; 2025 All Right Reserved. <a target="_blank" href="https://www.mobanwang.com/"
-								title="网站模板" class="text-white">网站模板</a></p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-12">
-					<div class="ft-right-btm">
-						<div class="ft-links">
-							<ul>
-								<li><a href="#">Terms of Service</a></li>
-								<li><a class="border-btm" href="#">Privacy Policy</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer> -->
-	<!-- Js File -->
-	<script src="assets/js/modernizr.min.js"></script>
-	<script src="assets/js/jquery-3.5.1.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	<script src="assets/js/ajax-form.js"></script>
-	<script src="assets/js/jquery.nav.min.js"></script>
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
-	<script src="assets/js/mixitup.min.js"></script>
-	<script src="assets/js/wow.min.js"></script>
-	<script src="assets/js/script.js"></script>
-</body>
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <img src="assets/img/icon2.png" alt="XMU-HeliCipher">
+                            <h4>XMU-HeliCipher</h4>
+                        </div>
+                        <p class="footer-description">
+                            Revolutionizing product authenticity through innovative DNA-based authentication technology.
+                            Nature's ultimate proof against counterfeiting.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-researchgate"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-widget">
+                        <h5>Quick Links</h5>
+                        <ul class="footer-menu">
+                            <li><a href="project.html">Project Overview</a></li>
+                            <li><a href="des_1.html">Design</a></li>
+                            <li><a href="exp_1.html">Experiments</a></li>
+                            <li><a href="elsi.html">ELSI</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="future.html">Future Vision</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-widget">
+                        <h5>Research Areas</h5>
+                        <ul class="footer-menu">
+                            <li><a href="des_2.html">DNA Encoding</a></li>
+                            <li><a href="des_3.html">Molecular Design</a></li>
+                            <li><a href="exp_2.html">Plasmid Construction</a></li>
+                            <li><a href="exp_3.html">DNA Encapsulation</a></li>
+                            <li><a href="exp_4.html">Product Decoding</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12">
+                    <div class="footer-widget">
+                        <h5>Contact</h5>
+                        <div class="contact-info">
+                            <p><i class="fas fa-university"></i>Xiamen University</p>
+                            <p><i class="fas fa-envelope"></i>info@xmu-helicipher.org</p>
+                            <p><i class="fas fa-dna"></i>Biotechnology Lab</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer-copyright">
+                            <p>&copy; 2024 XMU-HeliCipher Team. All rights reserved. | Revolutionizing Authentication
+                                with DNA Technology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<style>
-	 /* 导航栏样式 */
-    .navbar-area1 {
-        width: 100%;
-        height: auto;
-        position: relative;
-        z-index: 1000;
-    }
+    <!-- JavaScript Files -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
 
-    .full-nav1 {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(15, 23, 42, 1);
-        backdrop-filter: var(--backdrop-blur);
-        border-bottom: 1px solid var(--glass-border);
-        z-index: 999;
-        transition: var(--transition);
-        padding: 15px 0;
-    }
+    <script>
+        // 页面加载和动画管理
+        document.addEventListener('DOMContentLoaded', function () {
+            // 立即隐藏预加载器
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.display = 'none';
+            }
 
-    .full-nav1:hover {
-        background: rgba(15, 23, 42, 0.95);
-        box-shadow: var(--shadow-colored);
-    }
+            // 立即显示body内容
+            document.body.style.opacity = '1';
+            document.body.style.visibility = 'visible';
+            document.body.classList.add('loaded');
 
-	/* Services Section */
-	.services-section {
-		padding: 80px 0;
-		text-align: center;
-	}
+            // Hero内容立即显示
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.opacity = '1';
+                heroContent.style.transform = 'translateY(0)';
+            }
+            // 创建粒子系统
+            function createParticles() {
+                const particleContainer = document.querySelector('.particles');
+                if (!particleContainer) return;
 
-	.services-section h2 {
-		font-size: 36px;
-		font-weight: bold;
-		margin-bottom: 15px;
-	}
+                const particleCount = 30; // 减少粒子数量
 
-	.services-section .section-subtitle {
-		max-width: 600px;
-		margin: 0 auto 50px auto;
-		color: #666;
-		line-height: 1.6;
-	}
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 6 + 's';
+                    particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                    particleContainer.appendChild(particle);
+                }
+            }
 
-	.services-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 30px;
-		margin-top: 40px;
-	}
+            // 立即隐藏加载进度条
+            const loadingBarContainer = document.querySelector('.loading-bar');
+            if (loadingBarContainer) {
+                loadingBarContainer.style.display = 'none';
+            }
 
-	.service-card {
-		background-color: #fff;
-		padding: 40px;
-		border-radius: 10px;
-		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-		text-align: left;
-		transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-		text-decoration: none;
-		color: inherit;
-		display: block;
-		position: relative;
-		overflow: hidden;
-	}
+            // 初始化
+            createParticles();
 
-	.service-card .card-content {
-		position: relative;
-		z-index: 2;
-	}
+            // jQuery动画增强
+            $(document).ready(function () {
+                // 滚动动画触发
+                function initScrollAnimations() {
+                    $('.tech-content, .tech-visual, .problem-card, .solution-card, .cta-content').each(function () {
+                        $(this).css({
+                            'opacity': '0',
+                            'transform': 'translateY(50px)',
+                            'transition': 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)'
+                        });
+                    });
 
-	.service-card .card-icon,
-	.service-card h3,
-	.service-card p,
-	.service-card .read-more {
-		transition: color 0.4s ease-in-out;
-	}
+                    // Hero content始终可见
+                    $('.hero-content').css({
+                        'opacity': '1',
+                        'transform': 'translateY(0)'
+                    });
+                }
 
-	.service-card .card-icon {
-		font-size: 40px;
-		color: #2366a9;
-		margin-bottom: 20px;
-	}
+                // 高性能滚动检测
+                let ticking = false;
+                function updateScrollAnimations() {
+                    const scrollTop = $(window).scrollTop();
+                    const windowHeight = $(window).height();
 
-	.service-card h3 {
-		font-size: 22px;
-		margin-bottom: 15px;
-	}
+                    $('.tech-content, .tech-visual, .problem-card, .solution-card, .cta-content').each(function () {
+                        if (!$(this).hasClass('animate-in')) {
+                            const elementTop = $(this).offset().top;
 
-	.service-card p {
-		color: #666;
-		line-height: 1.7;
-		margin-bottom: 20px;
-	}
+                            if (elementTop < scrollTop + windowHeight - 100) {
+                                $(this).addClass('animate-in');
+                                $(this).css({
+                                    'opacity': 1,
+                                    'transform': 'translateY(0)'
+                                });
+                            }
+                        }
+                    });
 
-	.service-card .read-more {
-		color: #333;
-		font-weight: bold;
-		text-decoration: none;
-	}
+                    ticking = false;
+                }
 
-	/* Hover Effect for Service Card */
-	.service-card::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: #0a4275;
-		z-index: 1;
-		transform: translateX(100%);
-		transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-	}
+                // 优化的滚动事件监听
+                $(window).on('scroll', function () {
+                    if (!ticking) {
+                        requestAnimationFrame(updateScrollAnimations);
+                        ticking = true;
+                    }
+                });
 
-	.service-card:hover {
-		transform: translateY(-10px);
-		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-	}
+                // 初始检查
+                initScrollAnimations();
+                updateScrollAnimations();
 
-	.service-card:hover::before {
-		transform: translateX(0%);
-	}
+                // 平滑滚动
+                $('a[href^="#"]').on('click', function (event) {
+                    const target = $(this.getAttribute('href'));
+                    if (target.length) {
+                        event.preventDefault();
+                        $('html, body').stop().animate({
+                            scrollTop: target.offset().top - 100
+                        }, 1000, 'easeInOutQuart');
+                    }
+                });
 
-	.service-card:hover .card-content,
-	.service-card:hover .card-icon,
-	.service-card:hover h3,
-	.service-card:hover p,
-	.service-card:hover .read-more {
-		color: #fff;
-	}
+                // 导航栏滚动效果 - 优化版本
+                let navTicking = false;
+                function updateNavbar() {
+                    const scrolled = $(window).scrollTop();
+                    if (scrolled > 50) {
+                        $('.full-nav1').addClass('scrolled');
+                    } else {
+                        $('.full-nav1').removeClass('scrolled');
+                    }
+                    navTicking = false;
+                }
 
-	/* Responsive */
-	@media (max-width: 992px) {
+                $(window).scroll(function () {
+                    if (!navTicking) {
+                        requestAnimationFrame(updateNavbar);
+                        navTicking = true;
+                    }
+                });
 
-		.hero-content,
-		.hero-image {
-			max-width: 100%;
+                // 轻量级视差效果
+                let parallaxTicking = false;
+                function updateParallax() {
+                    const scrolled = $(window).scrollTop();
+                    $('.dna-animation').css('transform', 'translateY(' + (scrolled * 0.2) + 'px)');
+                    $('.floating-particles').css('transform', 'translateY(' + (scrolled * -0.15) + 'px)');
+                    parallaxTicking = false;
+                }
+
+                $(window).scroll(function () {
+                    if (!parallaxTicking) {
+                        requestAnimationFrame(updateParallax);
+                        parallaxTicking = true;
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+        :root {
+            --backdrop-blur: blur(20px);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow-colored: 0 8px 32px rgba(102, 126, 234, 0.3);
+            --primary-gradient: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+        }
+
+        /* 导航栏样式 */
+        .navbar-area1 {
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .full-nav1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 999;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 15px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .full-nav1:hover,
+        .full-nav1.scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+        }
+
+        .full-nav1.scrolled {
+            backdrop-filter: blur(25px);
+            border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+        }
+
+        /* 导航栏图标样式 */
+        .navbar-logo {
+            display: inline-block;
+            margin-right: 30px;
+            vertical-align: middle;
+            order: -1;
+        }
+
+        .navbar-logo a {
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navbar-logo a::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-logo a:hover::after {
+            border-color: rgba(102, 126, 234, 0.5);
+            transform: rotate(360deg);
+        }
+
+        .navbar-logo a:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        .navbar-logo img {
+            height: 45px;
+            width: auto;
+            transition: all 0.3s ease;
+            vertical-align: middle;
+            filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.3));
+        }
+
+        .navbar-logo img:hover {
+            transform: scale(1.1) rotate(5deg);
+            filter: drop-shadow(0 0 15px rgba(102, 126, 234, 0.6));
+        }
+
+        .header-main {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        /* 导航菜单样式 */
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+        }
+
+        .menu-iteam a {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            padding: 10px 0;
+            position: relative;
+            transition: all 0.3s ease;
+            font-size: 15px;
+        }
+
+        .menu-iteam a::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+
+        .menu-iteam a:hover,
+        .menu-iteam a.active {
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(102, 126, 234, 0.6);
+        }
+
+        .menu-iteam a:hover::before,
+        .menu-iteam a.active::before {
+            width: 100%;
+        }
+
+        .menu-iteam a.active {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        /* 子菜单样式 */
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            min-width: 250px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .menu-iteam-has-childrean:hover .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .submenu .menu-iteam a {
+            padding: 12px 20px;
+            display: block;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+        }
+
+        .submenu .menu-iteam:last-child a {
+            border-bottom: none;
+        }
+
+        /* 粒子效果 */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #00d4ff;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite, colorShift 8s ease-in-out infinite;
+            opacity: 0.6;
+            box-shadow: 0 0 4px #00d4ff;
+        }
+
+        /* 加载进度条 */
+        .loading-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-progress {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.3s ease;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+        }
+
+        /* 项目标准动画 */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes colorShift {
+            0% {
+                background: #00d4ff;
+                box-shadow: 0 0 4px #00d4ff;
+            }
+
+            33% {
+                background: #00ff88;
+                box-shadow: 0 0 4px #00ff88;
+            }
+
+            66% {
+                background: #ffaa00;
+                box-shadow: 0 0 4px #ffaa00;
+            }
+
+            100% {
+                background: #00d4ff;
+                box-shadow: 0 0 4px #00d4ff;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes titlePulse {
+            0% {
+                text-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+                transform: scale(1);
+            }
+
+            100% {
+                text-shadow: 0 0 20px rgba(118, 75, 162, 0.8);
+                transform: scale(1.02);
+            }
+        }
+
+        /* 页面加载状态 */
+        body:not(.loaded) .hero-section {
+            opacity: 1;
+        }
+
+        body.loaded .hero-section {
+            opacity: 1;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* 确保内容可见性 */
+        .hero-section,
+        .tech-overview-section,
+        .problem-solution-section,
+        .cta-section {
+            opacity: 1;
+            display: block;
+        }
+
+        /* 基础内容可见性保证 */
+        .hero-content {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        .tech-content,
+        .tech-visual,
+        .problem-card,
+        .solution-card,
+        .cta-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 确保图片正常显示 */
+        .main-image,
+        .tech-image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* 防止内容被隐藏 */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 强制隐藏预加载器 */
+        #preloader {
+            display: none !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+        }
+
+        /* 确保body内容立即可见 */
+        body {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+
+        /* 立即显示所有主要内容区域 */
+        .hero-section,
+        .tech-overview-section,
+        .problem-solution-section,
+        .cta-section,
+        .hero-content,
+        .tech-content,
+        .tech-visual,
+        .problem-card,
+        .solution-card,
+        .cta-content {
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: block !important;
+            transform: translateY(0) !important;
+        }
+
+        /* 强制隐藏加载元素 */
+        .loading-bar {
+            display: none !important;
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            z-index: 1;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(240, 147, 251, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 40% 40%, rgba(78, 205, 196, 0.1) 0%, transparent 35%),
+                radial-gradient(circle at 70% 70%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 10% 30%, rgba(118, 75, 162, 0.1) 0%, transparent 40%);
+            animation: heroBackgroundShift 20s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes heroBackgroundShift {
+
+            0%,
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: scale(1.1) rotate(180deg);
+                opacity: 0.8;
+            }
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .dna-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(45deg, rgba(102, 126, 234, 0.08) 1px, transparent 1px),
+                linear-gradient(-45deg, rgba(240, 147, 251, 0.06) 1px, transparent 1px),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dna-helix" patternUnits="userSpaceOnUse" width="30" height="60"><path d="M15,0 Q20,15 15,30 Q10,45 15,60" stroke="rgba(102,126,234,0.15)" stroke-width="1.5" fill="none"/><path d="M15,0 Q10,15 15,30 Q20,45 15,60" stroke="rgba(240,147,251,0.1)" stroke-width="1" fill="none"/></pattern></defs><rect width="100" height="100" fill="url(%23dna-helix)"/></svg>');
+            background-size: 80px 80px, 60px 60px, 120px 240px;
+            animation: dnaFlow 30s linear infinite, dnaRotate 20s ease-in-out infinite;
+            opacity: 0.6;
+        }
+
+        .dna-animation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse at 25% 25%, rgba(102, 126, 234, 0.1) 20%, transparent 60%),
+                radial-gradient(ellipse at 75% 75%, rgba(240, 147, 251, 0.08) 20%, transparent 60%),
+                radial-gradient(ellipse at 50% 50%, rgba(78, 205, 196, 0.06) 20%, transparent 70%);
+            animation: dnaPulse 12s ease-in-out infinite;
+        }
+
+        .dna-animation::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(102, 126, 234, 0.4) 20%,
+                    rgba(240, 147, 251, 0.6) 40%,
+                    rgba(78, 205, 196, 0.5) 60%,
+                    rgba(0, 212, 255, 0.4) 80%,
+                    transparent 100%);
+            transform: translateY(-50%);
+            animation: dnaHelix 15s ease-in-out infinite;
+            box-shadow:
+                0 0 10px rgba(102, 126, 234, 0.3),
+                0 0 20px rgba(240, 147, 251, 0.2);
+        }
+
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(240, 147, 251, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 40% 40%, rgba(78, 205, 196, 0.1) 0%, transparent 35%),
+                radial-gradient(circle at 70% 70%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 10% 30%, rgba(118, 75, 162, 0.1) 0%, transparent 40%);
+            animation: floatParticles 20s ease-in-out infinite;
+        }
+
+        .floating-particles::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 60% 10%, rgba(102, 126, 234, 0.05) 0%, transparent 30%),
+                radial-gradient(circle at 30% 90%, rgba(240, 147, 251, 0.08) 0%, transparent 35%);
+            animation: floatParticles 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes dnaFlow {
+            0% {
+                background-position: 0 0, 0 0;
+            }
+
+            100% {
+                background-position: 60px 60px, -40px -40px;
+            }
+        }
+
+        @keyframes dnaRotate {
+
+            0%,
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.1);
+            }
+        }
+
+        @keyframes dnaPulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes dnaHelix {
+            0% {
+                transform: translateY(-50%) scaleX(0.8);
+                opacity: 0.4;
+            }
+
+            25% {
+                transform: translateY(-50%) scaleX(1.2) skewX(15deg);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: translateY(-50%) scaleX(1) skewX(0deg);
+                opacity: 1;
+            }
+
+            75% {
+                transform: translateY(-50%) scaleX(1.2) skewX(-15deg);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-50%) scaleX(0.8);
+                opacity: 0.4;
+            }
+        }
+
+        @keyframes floatParticles {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+                opacity: 0.6;
+            }
+
+            25% {
+                transform: translate(40px, -30px) rotate(90deg);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: translate(20px, -60px) rotate(180deg);
+                opacity: 1;
+            }
+
+            75% {
+                transform: translate(-20px, -40px) rotate(270deg);
+                opacity: 0.8;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 60px 20px;
+            padding-left: 40px;
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            animation: heroContentSlideIn 1s ease-out forwards;
+        }
+
+        @keyframes heroContentSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.25), rgba(240, 147, 251, 0.25));
+            border: 1px solid rgba(102, 126, 234, 0.4);
+            border-radius: 30px;
+            padding: 10px 24px;
+            margin-bottom: 35px;
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+            animation: badgePulse 3s ease-in-out infinite;
+        }
+
+        .hero-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: badgeShine 2s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+
+            0%,
+            100% {
+                border-color: rgba(102, 126, 234, 0.4);
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+            }
+
+            50% {
+                border-color: rgba(240, 147, 251, 0.6);
+                box-shadow: 0 0 0 8px rgba(102, 126, 234, 0);
+            }
+        }
+
+        @keyframes badgeShine {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        .hero-badge span {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 3.8rem;
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.15;
+            margin-bottom: 35px;
+            text-shadow:
+                0 2px 4px rgba(0, 0, 0, 0.3),
+                0 4px 8px rgba(102, 126, 234, 0.2),
+                0 8px 16px rgba(0, 0, 0, 0.1);
+            animation: titleFloatIn 1.2s ease-out 0.3s forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes titleFloatIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg,
+                    #667eea 0%,
+                    #764ba2 25%,
+                    #f093fb 50%,
+                    #4ecdc4 75%,
+                    #667eea 100%);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientFlow 4s ease-in-out infinite;
+            position: relative;
+            display: inline-block;
+        }
+
+        .gradient-text::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            background-size: inherit;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: blur(2px);
+            opacity: 0.7;
+            z-index: -1;
+        }
+
+        @keyframes gradientFlow {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.75;
+            margin-bottom: 45px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            max-width: 100%;
+            width: 100%;
+            animation: descriptionFadeIn 1.2s ease-out 0.6s forwards;
+            opacity: 0;
+            transform: translateY(20px);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes descriptionFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-description strong {
+            color: #ffffff;
+            font-weight: 700;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(240, 147, 251, 0.2));
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1em;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            width: 100%;
+            animation: buttonsSlideIn 1.2s ease-out 0.9s forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes buttonsSlideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 200% 200%;
+            color: #ffffff;
+            border: 2px solid transparent;
+            box-shadow:
+                0 4px 15px rgba(102, 126, 234, 0.3),
+                0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow:
+                0 20px 50px rgba(102, 126, 234, 0.4),
+                0 8px 25px rgba(240, 147, 251, 0.3);
+            background-position: 100% 100%;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+        }
+
+        .btn-secondary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(240, 147, 251, 0.2));
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .btn-secondary:hover {
+            border-color: rgba(102, 126, 234, 0.6);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(102, 126, 234, 0.2);
+            color: #ffffff;
+        }
+
+        .btn-secondary:hover::after {
+            left: 0;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: flex-start;
+            animation: statsFadeIn 1.2s ease-out 1.2s forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes statsFadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            border-radius: 15px 15px 0 0;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Orbitron', monospace;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 1rem;
+            color: #c7d2fe;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-visual {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            animation: imageSlideIn 1.2s ease-out 0.5s forwards;
+            opacity: 0;
+            transform: translateX(30px);
+            padding: 0 20px;
+        }
+
+        @keyframes imageSlideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .main-image-container {
+            position: relative;
+            display: inline-block;
+            max-width: 85%;
+            margin: 0 auto;
+        }
+
+        .main-image {
+            max-width: 100%;
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.3),
+                0 8px 30px rgba(102, 126, 234, 0.25),
+                0 0 40px rgba(240, 147, 251, 0.15);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .main-image:hover {
+            transform: scale(1.05) rotateY(2deg) rotateX(1deg);
+            box-shadow:
+                0 35px 100px rgba(0, 0, 0, 0.4),
+                0 15px 50px rgba(102, 126, 234, 0.35),
+                0 0 60px rgba(240, 147, 251, 0.25),
+                0 0 80px rgba(78, 205, 196, 0.15);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .image-glow {
+            position: absolute;
+            top: -25px;
+            left: -25px;
+            right: -25px;
+            bottom: -25px;
+            background:
+                linear-gradient(135deg,
+                    rgba(102, 126, 234, 0.4),
+                    rgba(240, 147, 251, 0.3),
+                    rgba(78, 205, 196, 0.2));
+            border-radius: 40px;
+            filter: blur(25px);
+            z-index: -1;
+            animation: advancedPulseGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes advancedPulseGlow {
+
+            0%,
+            100% {
+                opacity: 0.6;
+                transform: scale(1) rotate(0deg);
+            }
+
+            25% {
+                opacity: 0.8;
+                transform: scale(1.05) rotate(90deg);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.1) rotate(180deg);
+            }
+
+            75% {
+                opacity: 0.8;
+                transform: scale(1.05) rotate(270deg);
+            }
+        }
+
+        /* Hero Section Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero-visual {
+                padding: 0 15px;
+            }
+            
+            .main-image-container {
+                max-width: 90%;
+            }
+            
+            .main-image {
+                max-height: 420px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-visual {
+                padding: 0 10px;
+            }
+            
+            .main-image-container {
+                max-width: 95%;
+            }
+            
+            .main-image {
+                max-height: 380px;
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem;
+                padding: 0 15px;
+            }
+            
+            .hero-content p {
+                font-size: 1.15rem;
+                padding: 0 15px;
+            }
+        }
+
+        /* Technology Overview Section */
+        .tech-overview-section {
+            padding: 120px 40px;
+            background: linear-gradient(135deg,
+                    rgba(15, 23, 42, 0.98) 0%,
+                    rgba(30, 41, 59, 0.95) 50%,
+                    rgba(51, 65, 85, 0.98) 100%);
+            position: relative;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .tech-overview-section .container {
+            max-width: 1400px;
+        }
+
+        .tech-overview-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 15% 85%, rgba(102, 126, 234, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 85% 15%, rgba(240, 147, 251, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(78, 205, 196, 0.08) 0%, transparent 50%),
+                linear-gradient(45deg, transparent 30%, rgba(0, 212, 255, 0.05) 50%, transparent 70%);
+            animation: techBackgroundFlow 25s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .tech-overview-section::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent,
+                    rgba(102, 126, 234, 0.1),
+                    transparent,
+                    rgba(240, 147, 251, 0.08),
+                    transparent);
+            animation: techRotate 30s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes techBackgroundFlow {
+
+            0%,
+            100% {
+                background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%;
+            }
+
+            50% {
+                background-position: 100% 100%, 0% 0%, 25% 75%, 100% 0%;
+            }
+        }
+
+        @keyframes techRotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .tech-content {
+            padding: 60px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Section Text Styles */
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.75rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-description {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.75;
+            margin-bottom: 40px;
+            max-width: 85%;
+        }
+
+        /* Feature Content Styles */
+        .feature-content h4 {
+            color: #ffffff !important;
+            font-size: 1.25rem !important;
+            font-weight: 700 !important;
+            margin-bottom: 10px !important;
+        }
+
+        .feature-content p {
+            color: rgba(255, 255, 255, 0.8) !important;
+            font-size: 1rem !important;
+            line-height: 1.6 !important;
+        }
+
+        /* Services Section */
+		.services-section {
+			padding: 120px 40px;
 			text-align: center;
+			background: linear-gradient(135deg,
+				rgba(15, 23, 42, 0.98) 0%,
+				rgba(30, 41, 59, 0.95) 50%,
+				rgba(51, 65, 85, 0.98) 100%);
+			position: relative;
+			overflow: hidden;
 		}
 
-		.hero-image {
-			margin-top: 40px;
+		.services-section::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: 
+				radial-gradient(circle at 15% 85%, rgba(102, 126, 234, 0.15) 0%, transparent 40%),
+				radial-gradient(circle at 85% 15%, rgba(240, 147, 251, 0.12) 0%, transparent 40%),
+				radial-gradient(circle at 50% 50%, rgba(78, 205, 196, 0.08) 0%, transparent 50%),
+				linear-gradient(45deg, transparent 30%, rgba(0, 212, 255, 0.05) 50%, transparent 70%);
+			animation: techBackgroundFlow 25s ease-in-out infinite;
+			pointer-events: none;
+			z-index: 1;
+		}
+
+		.services-section .container {
+			position: relative;
+			z-index: 2;
+		}
+
+		.services-section .section-header {
+			margin-bottom: 80px;
+		}
+
+		.services-section .section-title {
+			font-family: 'Orbitron', monospace;
+			font-size: 2.75rem;
+			font-weight: 900;
+			color: #ffffff;
+			margin-bottom: 25px;
+			line-height: 1.2;
+			text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+			background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.services-section .section-subtitle {
+			max-width: 700px;
+			margin: 0 auto;
+			color: rgba(255, 255, 255, 0.85);
+			line-height: 1.75;
+			font-size: 1.2rem;
+			font-weight: 500;
+			text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 		}
 
 		.services-grid {
-			grid-template-columns: repeat(2, 1fr);
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 40px;
+			margin-top: 60px;
 		}
 
-		.main-header {
-			flex-direction: column;
+		.service-card {
+			background: linear-gradient(135deg, 
+				rgba(255, 255, 255, 0.08) 0%, 
+				rgba(255, 255, 255, 0.04) 50%,
+				rgba(102, 126, 234, 0.02) 100%);
+			padding: 45px 35px;
+			border-radius: 25px;
+			box-shadow: 
+				0 25px 80px rgba(0, 0, 0, 0.3),
+				0 0 30px rgba(102, 126, 234, 0.2);
+			text-align: left;
+			transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+			position: relative;
+			overflow: hidden;
+			border: 2px solid rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(20px);
+		}
+        
+        .service-card .card-content {
+            position: relative;
+            z-index: 2;
+        }
+
+		.service-card .card-icon,
+        .service-card h3,
+        .service-card p,
+        .service-card .read-more {
+             transition: all 0.4s ease-in-out;
+        }
+
+		.service-card .card-icon {
+			font-size: 48px;
+			color: #ffffff;
+			margin-bottom: 25px;
+			text-shadow: 0 2px 10px rgba(102, 126, 234, 0.4);
 		}
 
-		.main-header nav {
-			margin-top: 15px;
-		}
-	}
-
-	@media (max-width: 768px) {
-		.services-grid {
-			grid-template-columns: 1fr;
+		.service-card h3 {
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin-bottom: 18px;
+			color: #ffffff;
+			font-family: 'Orbitron', monospace;
 		}
 
-		.main-header .logo-and-nav {
-			flex-direction: column;
+		.service-card p {
+			color: rgba(255, 255, 255, 0.8);
+			line-height: 1.7;
+			margin-bottom: 25px;
+			font-size: 1rem;
 		}
 
-		.main-header nav {
-			margin-left: 0;
-			margin-top: 15px;
+		.service-card .read-more {
+			color: rgba(102, 126, 234, 0.9);
+			font-weight: 600;
+			text-decoration: none;
+			font-size: 0.95rem;
+			text-transform: uppercase;
+			letter-spacing: 0.8px;
 		}
 
-		.main-header .btn-get-start {
-			margin-top: 20px;
+		/* Hover Effect for Service Card */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+            	#667eea 0%, 
+            	#764ba2 50%, 
+            	#f093fb 100%);
+            z-index: 1;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+		.service-card:hover {
+			transform: translateY(-15px) scale(1.02);
+			box-shadow: 
+				0 40px 120px rgba(0, 0, 0, 0.5),
+				0 20px 60px rgba(102, 126, 234, 0.4),
+				0 0 80px rgba(240, 147, 251, 0.3);
+			border-color: rgba(102, 126, 234, 0.3);
 		}
-	}
-</style>
+
+        .service-card:hover::before {
+            transform: translateX(0%);
+        }
+
+		.service-card:hover .card-content,
+		.service-card:hover .card-icon,
+		.service-card:hover h3,
+		.service-card:hover p,
+		.service-card:hover .read-more {
+			color: #ffffff;
+			text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		}
+
+		.service-card:hover .card-icon {
+			color: #ffffff;
+			text-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+			transform: scale(1.15);
+		}
+
+		.service-card:hover .read-more {
+			color: #f093fb;
+			text-shadow: 0 0 10px rgba(240, 147, 251, 0.4);
+		}
+
+		/* Additional Visual Enhancements */
+		.service-card::after {
+			content: '';
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			background: conic-gradient(transparent,
+				rgba(102, 126, 234, 0.3),
+				transparent,
+				rgba(240, 147, 251, 0.3),
+				transparent);
+			opacity: 0;
+			animation: rotate 4s linear infinite;
+			z-index: 0;
+		}
+
+		.service-card:hover::after {
+			opacity: 1;
+		}
+
+		/* Stagger Animation for Cards */
+		.service-card:nth-child(1) {
+			animation-delay: 0.1s;
+		}
+
+		.service-card:nth-child(2) {
+			animation-delay: 0.2s;
+		}
+
+		.service-card:nth-child(3) {
+			animation-delay: 0.3s;
+		}
+
+		.service-card:nth-child(4) {
+			animation-delay: 0.4s;
+		}
+
+		.service-card:nth-child(5) {
+			animation-delay: 0.5s;
+		}
+
+		.service-card:nth-child(6) {
+			animation-delay: 0.6s;
+		}
+
+		/* Rotation Animation for Service Cards */
+		@keyframes rotate {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .services-grid { 
+                grid-template-columns: repeat(2, 1fr); 
+            }
+        }
+        @media (max-width: 768px) {
+            .services-grid { 
+                grid-template-columns: 1fr; 
+            }
+        }
+
+        .tech-features {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            padding: 35px;
+            background: linear-gradient(135deg,
+                    rgba(255, 255, 255, 0.08) 0%,
+                    rgba(255, 255, 255, 0.04) 50%,
+                    rgba(102, 126, 234, 0.02) 100%);
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            animation: featureSlideIn 0.8s ease-out;
+        }
+
+        .feature-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .feature-item:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .feature-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes featureSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            border-radius: 0 3px 3px 0;
+            transition: all 0.4s ease;
+        }
+
+        .feature-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg,
+                    rgba(102, 126, 234, 0.1) 0%,
+                    rgba(240, 147, 251, 0.05) 100%);
+            transition: width 0.4s ease;
+            z-index: -1;
+        }
+
+        .feature-item:hover {
+            transform: translateX(15px) scale(1.02);
+            border-color: rgba(102, 126, 234, 0.4);
+            box-shadow:
+                0 15px 50px rgba(0, 0, 0, 0.3),
+                0 0 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-item:hover::before {
+            width: 8px;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .feature-item:hover::after {
+            width: 100%;
+        }
+
+        .feature-icon {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow:
+                0 8px 25px rgba(102, 126, 234, 0.3),
+                0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .feature-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,
+                    rgba(255, 255, 255, 0.2) 0%,
+                    transparent 50%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .feature-item:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow:
+                0 12px 35px rgba(102, 126, 234, 0.4),
+                0 0 30px rgba(240, 147, 251, 0.3);
+        }
+
+        .feature-item:hover .feature-icon::before {
+            transform: translateX(100%);
+        }
+
+        .feature-icon i {
+            font-size: 24px;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-content h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .feature-item:hover .feature-content h4 {
+            color: #f093fb;
+            text-shadow: 0 0 10px rgba(240, 147, 251, 0.3);
+        }
+
+        .feature-content p {
+            color: #c7d2fe;
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+
+        .feature-item:hover .feature-content p {
+            color: #ffffff;
+        }
+
+        .tech-visual {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 40px 0;
+        }
+
+        .tech-image-container {
+            position: relative;
+            display: inline-block;
+            animation: techImageFloat 1s ease-out 0.8s forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes techImageFloat {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tech-image {
+            max-width: 100%;
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            border-radius: 25px;
+            box-shadow:
+                0 30px 100px rgba(0, 0, 0, 0.4),
+                0 15px 50px rgba(78, 205, 196, 0.3),
+                0 0 80px rgba(0, 212, 255, 0.2);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 3px solid rgba(78, 205, 196, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,
+                    rgba(78, 205, 196, 0.1) 0%,
+                    transparent 50%,
+                    rgba(0, 212, 255, 0.1) 100%);
+            border-radius: 22px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .tech-image:hover {
+            transform: translateY(-15px) scale(1.03) rotateY(2deg);
+            box-shadow:
+                0 45px 140px rgba(0, 0, 0, 0.5),
+                0 25px 80px rgba(78, 205, 196, 0.4),
+                0 0 100px rgba(0, 212, 255, 0.3),
+                0 0 150px rgba(102, 126, 234, 0.2);
+            border-color: rgba(0, 212, 255, 0.6);
+        }
+
+        .tech-image:hover::before {
+            opacity: 1;
+        }
+
+        .tech-overlay {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            z-index: 2;
+        }
+
+        .pulse-ring {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            width: 24px;
+            height: 24px;
+            border: 3px solid #00ff88;
+            border-radius: 50%;
+            animation: advancedPulse 2.5s ease-out infinite;
+        }
+
+        .pulse-ring::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 24px;
+            height: 24px;
+            border: 2px solid rgba(0, 255, 136, 0.5);
+            border-radius: 50%;
+            animation: advancedPulse 2.5s ease-out infinite 0.5s;
+        }
+
+        @keyframes advancedPulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(2);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: scale(3.5);
+                opacity: 0;
+            }
+        }
+
+        .tech-badge {
+            background: rgba(15, 23, 42, 0.9);
+            color: #00ff88;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(0, 255, 136, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            transform: scale(1.05);
+            box-shadow:
+                0 12px 35px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(0, 255, 136, 0.4);
+            border-color: rgba(0, 255, 136, 0.6);
+        }
+
+        .tech-badge i {
+            font-size: 16px;
+        }
+
+        /* Problem & Solution Section */
+        .problem-solution-section {
+            padding: 100px 40px;
+            background: var(--primary-gradient);
+            position: relative;
+        }
+
+        .problem-solution-section .container {
+            max-width: 1200px;
+        }
+
+        .problem-solution-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            opacity: 0.8;
+        }
+
+        .section-header {
+            margin-bottom: 80px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-top: 15px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .problem-card,
+        .solution-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border-radius: 20px;
+            padding: 40px;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover,
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+        }
+
+        .problem-card {
+            border-left: 4px solid #ff6b6b;
+        }
+
+        .solution-card {
+            border-left: 4px solid #00ff88;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .card-header i {
+            font-size: 24px;
+        }
+
+        .problem-card .card-header i {
+            color: #ff6b6b;
+        }
+
+        .solution-card .card-header i {
+            color: #00ff88;
+        }
+
+        .card-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .card-content p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.65;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .problem-list,
+        .solution-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .problem-list li,
+        .solution-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .problem-list i {
+            color: #ff6b6b;
+        }
+
+        .solution-list i {
+            color: #00ff88;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            text-align: center;
+        }
+
+        .cta-section .container {
+            max-width: 1200px;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ffffff;
+            transform: translateY(-3px);
+            color: #ffffff;
+        }
+
+        /* Enhanced Responsive Design */
+        @media (max-width: 1400px) {
+            .hero-title {
+                font-size: 3.4rem;
+            }
+
+            .section-title {
+                font-size: 2.8rem;
+            }
+
+            .hero-content {
+                padding: 50px 20px;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                gap: 35px;
+            }
+
+            .tech-overview-section,
+            .problem-solution-section {
+                padding: 100px 30px;
+            }
+
+            .feature-item {
+                padding: 30px 25px;
+            }
+
+            .navbar-logo img {
+                height: 42px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-section {
+                text-align: center;
+                padding-top: 100px;
+            }
+
+            .hero-content {
+                padding: 40px 50px;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.6rem;
+                line-height: 1.2;
+            }
+
+            .hero-description {
+                font-size: 1.15rem;
+                max-width: 100%;
+            }
+
+            .main-image {
+                max-height: 420px;
+                margin-top: 50px;
+            }
+
+            .tech-visual {
+                margin-top: 60px;
+            }
+
+            .tech-image {
+                max-height: 380px;
+            }
+
+            .tech-features {
+                gap: 25px;
+            }
+
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+            }
+
+            .feature-icon {
+                margin: 0 auto 20px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+
+            .stat-item {
+                min-width: 150px;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+                text-align: center;
+            }
+
+            .tech-overview-section,
+            .problem-solution-section {
+                padding: 80px 25px;
+            }
+
+            .footer-area {
+                padding: 60px 0 0;
+            }
+
+            .footer-widget {
+                margin-bottom: 50px;
+                text-align: center;
+            }
+
+            .footer-logo {
+                justify-content: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .menu {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding-top: 90px;
+                min-height: auto;
+            }
+
+            .hero-content {
+                padding: 40px 15px;
+                width: 100%;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+                line-height: 1.25;
+                margin-bottom: 25px;
+            }
+
+            .hero-description {
+                font-size: 1.1rem;
+                line-height: 1.65;
+                margin-bottom: 35px;
+            }
+
+            .hero-badge {
+                padding: 8px 18px;
+                margin-bottom: 25px;
+            }
+
+            .hero-badge span {
+                font-size: 14px;
+            }
+
+            .tech-overview-section,
+            .problem-solution-section,
+            .cta-section {
+                padding: 70px 20px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 40px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+                padding: 14px 28px;
+                font-size: 15px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+                gap: 25px;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .stat-item {
+                padding: 15px;
+                min-width: 120px;
+            }
+
+            .stat-number {
+                font-size: 1.4rem;
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .section-description {
+                font-size: 1.1rem;
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .tech-features {
+                margin-top: 30px;
+                gap: 20px;
+            }
+
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px 20px;
+            }
+
+            .feature-icon {
+                width: 55px;
+                height: 55px;
+                margin: 0 auto 15px;
+            }
+
+            .feature-icon i {
+                font-size: 20px;
+            }
+
+            .feature-content h4 {
+                font-size: 1.2rem;
+            }
+
+            .feature-content p {
+                font-size: 1rem;
+            }
+
+            .main-image,
+            .tech-image {
+                max-height: 320px;
+                border-radius: 20px;
+            }
+
+            .problem-card,
+            .solution-card {
+                padding: 25px 20px;
+                margin-bottom: 25px;
+                border-radius: 15px;
+            }
+
+            .card-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .cta-content h2 {
+                font-size: 2rem;
+                line-height: 1.3;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .btn-outline {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .services-section {
+                padding: 70px 0;
+            }
+
+            .navbar-logo img {
+                height: 38px;
+            }
+
+            .footer-area {
+                padding: 50px 0 0;
+            }
+
+            .footer-widget {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .footer-menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .contact-info {
+                text-align: center;
+            }
+
+            .contact-info p {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                padding: 20px 0;
+                margin-top: 40px;
+            }
+
+            .footer-copyright p {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding-top: 80px;
+                padding-bottom: 40px;
+            }
+
+            .hero-title {
+                font-size: 1.9rem;
+                line-height: 1.2;
+                margin-bottom: 20px;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 30px;
+            }
+
+            .hero-content {
+                padding: 30px 10px;
+                width: 100%;
+            }
+
+            .hero-badge {
+                padding: 6px 15px;
+                margin-bottom: 20px;
+            }
+
+            .hero-badge span {
+                font-size: 13px;
+            }
+
+            .hero-buttons {
+                margin-bottom: 35px;
+                gap: 12px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                padding: 12px 24px;
+                font-size: 14px;
+                max-width: 280px;
+            }
+
+            .hero-stats {
+                gap: 20px;
+            }
+
+            .stat-item {
+                padding: 12px;
+                min-width: 110px;
+            }
+
+            .stat-number {
+                font-size: 1.2rem;
+            }
+
+            .stat-label {
+                font-size: 0.85rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+
+            .section-description {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .tech-overview-section,
+            .problem-solution-section {
+                padding: 50px 15px;
+            }
+
+            .tech-content {
+                padding: 40px 0;
+            }
+
+            .tech-features {
+                gap: 15px;
+            }
+
+            .feature-item {
+                padding: 20px 15px;
+            }
+
+            .feature-icon {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 12px;
+            }
+
+            .feature-icon i {
+                font-size: 18px;
+            }
+
+            .feature-content h4 {
+                font-size: 1.1rem;
+            }
+
+            .feature-content p {
+                font-size: 0.95rem;
+            }
+
+            .cta-section {
+                padding: 50px 15px;
+            }
+
+            .cta-content h2 {
+                font-size: 1.8rem;
+                line-height: 1.25;
+                margin-bottom: 15px;
+            }
+
+            .cta-content p {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .card-header h3 {
+                font-size: 1.2rem;
+            }
+
+            .problem-card,
+            .solution-card {
+                padding: 20px 15px;
+                border-radius: 12px;
+            }
+
+            .main-image,
+            .tech-image {
+                max-height: 280px;
+                border-radius: 15px;
+            }
+
+            .navbar-logo img {
+                height: 35px;
+            }
+
+            .footer-area {
+                padding: 40px 0 0;
+            }
+
+            .footer-widget {
+                margin-bottom: 30px;
+            }
+
+            .footer-logo h4 {
+                font-size: 1.1rem;
+            }
+
+            .footer-description {
+                font-size: 0.9rem;
+            }
+
+            .social-link {
+                width: 40px;
+                height: 40px;
+            }
+
+            .footer-bottom {
+                padding: 15px 0;
+                margin-top: 30px;
+            }
+
+            .footer-copyright p {
+                font-size: 0.8rem;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.7rem;
+            }
+
+            .hero-description {
+                font-size: 0.95rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .stat-item {
+                width: 100%;
+                max-width: 200px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                max-width: 260px;
+            }
+
+            .container {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .tech-overview-section,
+            .problem-solution-section,
+            .cta-section {
+                padding: 40px 12px;
+            }
+
+            .services-section {
+                padding: 50px 0;
+            }
+
+            .main-image,
+            .tech-image {
+                max-height: 240px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-content {
+                padding: 25px 20px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                max-width: 240px;
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .navbar-logo img {
+                height: 32px;
+            }
+
+            .footer-copyright p {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Scroll Animation Styles */
+        .hero-content,
+        .tech-content,
+        .tech-visual,
+        .problem-card,
+        .solution-card,
+        .cta-content {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero-content.animate-in,
+        .tech-content.animate-in,
+        .tech-visual.animate-in,
+        .problem-card.animate-in,
+        .solution-card.animate-in,
+        .cta-content.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger animation delays */
+        .tech-content.animate-in {
+            transition-delay: 0.2s;
+        }
+
+        .tech-visual.animate-in {
+            transition-delay: 0.4s;
+        }
+
+        .problem-card.animate-in {
+            transition-delay: 0.1s;
+        }
+
+        .solution-card.animate-in {
+            transition-delay: 0.3s;
+        }
+
+        /* Enhanced hover effects */
+        .feature-item {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .feature-item:hover {
+            transform: translateX(15px) scale(1.02);
+            border-color: rgba(102, 126, 234, 0.6);
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.2),
+                0 0 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .feature-item:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .problem-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow:
+                0 35px 100px rgba(0, 0, 0, 0.4),
+                0 0 60px rgba(255, 107, 107, 0.2);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow:
+                0 35px 100px rgba(0, 0, 0, 0.4),
+                0 0 60px rgba(0, 255, 136, 0.2);
+        }
+
+        /* Button glow effects */
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+            border-radius: 50px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-primary:hover::before {
+            opacity: 1;
+        }
+
+        .btn-secondary::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.3), transparent);
+            border-radius: 50%;
+            transition: all 0.5s ease;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .btn-secondary:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Enhanced statistics animation */
+        .stat-item {
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .stat-item:hover .stat-number {
+            text-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+        }
+
+        /* Magnetic effect for buttons */
+        @media (min-width: 1024px) {
+            .btn-primary,
+            .btn-secondary,
+            .btn-outline {
+                transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
+
+
+
+        /* Footer Styles */
+        .footer-area {
+            background: linear-gradient(135deg,
+                    rgba(15, 23, 42, 0.98) 0%,
+                    rgba(30, 41, 59, 0.95) 50%,
+                    rgba(51, 65, 85, 0.98) 100%);
+            color: #ffffff;
+            padding: 80px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(240, 147, 251, 0.08) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .footer-area::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+        }
+
+        .footer-widget {
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .footer-logo img {
+            height: 45px;
+            width: auto;
+            filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.3));
+        }
+
+        .footer-logo h4 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-description {
+            color: #c7d2fe;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(240, 147, 251, 0.2));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px) scale(1.1);
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.4), rgba(240, 147, 251, 0.3));
+            border-color: rgba(102, 126, 234, 0.5);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            color: #ffffff;
+        }
+
+        .footer-widget h5 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .footer-widget h5::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 1px;
+        }
+
+        .footer-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-menu li {
+            margin-bottom: 12px;
+        }
+
+        .footer-menu a {
+            color: #c7d2fe;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .footer-menu a::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: rgba(102, 126, 234, 0.6);
+            font-size: 0.7rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-menu a:hover {
+            color: #ffffff;
+            padding-left: 20px;
+        }
+
+        .footer-menu a:hover::before {
+            color: #f093fb;
+            transform: translateX(3px);
+        }
+
+        .contact-info p {
+            color: #c7d2fe;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            color: rgba(102, 126, 234, 0.7);
+            width: 16px;
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 25px 0;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-copyright {
+            text-align: center;
+        }
+
+        .footer-copyright p {
+            color: #8892b0;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</body>
 
 </html>

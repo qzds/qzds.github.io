@@ -44,6 +44,11 @@
                     <div class="col-lg-8 col-md-6 col-xl-8">
                         <div class="header">
                             <div class="header-main">
+                                <div class="navbar-logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/icon.png" alt="Logo">
+                                    </a>
+                                </div>
                                 <div class="open-nav-menu">
                                     <span></span>
                                 </div>
@@ -59,11 +64,10 @@
                                         <li class="menu-iteam menu-iteam-has-childrean"><a href="des_1.html"
                                                 data-toggle="submenu">Design<i class="plus"></i></a>
                                             <ul class="submenu">
-                                                <li class="menu-iteam"><a href="des_1.html">Inspiration</a></li>
-                                                <li class="menu-iteam"><a href="des_2.html">Algorithm design</a></li>
-                                                <li class="menu-iteam"><a href="des_3.html">Molecular Structure Design</a></li>
-                                                <li class="menu-iteam"><a href="des_4.html">Characterization</a></li>
-                                                <li class="menu-iteam"><a href="des_5.html">Technology Industrial Chain Design</a></li>
+                                                <li class="menu-iteam"><a href="des_1.html">Design Inspiration</a></li>
+                                                <li class="menu-iteam"><a href="des_2.html">Encoding Algorithm</a></li>
+                                                <li class="menu-iteam"><a href="des_3.html">Molecular Architecture</a></li>
+                                                <li class="menu-iteam"><a href="des_4.html">Industrial Ecosystem</a></li>
                                             </ul>
                                         </li>
                                         <li class="menu-iteam menu-iteam-has-childrean"><a href="exp_1.html"
@@ -134,9 +138,9 @@
         </div>
         
         <div class="inspiration-section">
-            <div class="intro-block">
-                <p class="lead-text">
-                    Biological macromolecules such as nucleic acids have amazing ability to store information.
+            <div class="content-box">
+                <p class="content-text">
+                    Biological macromolecules such as nucleic acids have amazing ability to store information. According to research, DNA is currently the material with the highest information storage density, with a storage density of up to 6 orders of magnitude. DNA are microscopic and cannot be directly observed with the naked eye or light microscope, so they are highly hidden. More importantly, as a natural biomolecule, DNA has good biocompatibility and high environmental friendliness, and is not likely to cause adverse effects on organisms and the environment. What is particularly critical is its anti-counterfeiting potential: the artificial DNA sequence is almost the same as natural DNA in composition, but its molecular structure is precise and complex, and the base arrangement has a high degree of randomness and complexity, making it difficult to synthesize accurately under normal conditions. Specifically, mixing DNA fragments carrying specific security information into a large number of random or unrelated DNA sequences makes it extremely difficult to imitate and tamper with them, thus greatly raising the threshold for information forgery. Therefore, we used DNA as a carrier to design a biological macromolecule with an anti-counterfeiting effect.
                 </p>
             </div>
             
@@ -176,15 +180,19 @@
                 </div>
             </div>
             
+            <div class="simple-image">
+                <img src="assets/img/design/1-1.png" alt="DNA Design Structure">
+            </div>
+            
             <div class="conclusion-box">
                 <div class="conclusion-icon"></div>
                 <div class="conclusion-content">
-                    <h3>Our Design Goal</h3>
-                    <p>Therefore, we want to use DNA as a carrier to design a biological macromolecule with anti-counterfeiting effect.</p>
+                    <h3>Key Challenges</h3>
+                    <p>Based on the characteristics of high-density information storage and easy degradation of DNA molecules, the problems that need to be solved mainly include: designing reasonable algorithms to achieve efficient encoding of DNA base information, and constructing reasonable DNA macromolecular structures to achieve effective preservation of anti-counterfeiting information.</p>
                 </div>
             </div>
             
-            <!-- <div class="challenges-section">
+            <div class="challenges-section">
                 <h3 class="section-heading">Key Challenges to Address</h3>
                 <div class="challenges-grid">
                     <div class="challenge-card">
@@ -203,7 +211,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 
@@ -213,7 +221,6 @@
             <a href="des_2.html" class="page-numbers">2</a>
             <a href="des_3.html" class="page-numbers">3</a>
             <a href="des_4.html" class="page-numbers">4</a>
-            <a href="des_5.html" class="page-numbers">5</a>
         </div>
     </div>
 
@@ -567,6 +574,41 @@
         box-shadow: var(--shadow-colored);
     }
 
+    /* 导航栏图标样式 */
+    .navbar-logo {
+        display: inline-block;
+        margin-right: 30px;
+        vertical-align: middle;
+        order: -1; /* 确保图标在最左侧 */
+    }
+
+    .navbar-logo a {
+        display: inline-block;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .navbar-logo a:hover {
+        opacity: 0.8;
+    }
+
+    .navbar-logo img {
+        height: 40px;
+        width: auto;
+        transition: transform 0.3s ease;
+        vertical-align: middle;
+    }
+
+    .navbar-logo img:hover {
+        transform: scale(1.05);
+    }
+
+    .header-main {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
 
     /* 页面头部区域 */
     .page-area {
@@ -719,29 +761,54 @@
         margin-top: 50px;
     }
 
-    .intro-block {
-        text-align: center;
+    .content-box {
         margin-bottom: 50px;
-        padding: 30px;
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        animation: pulse 4s ease-in-out infinite;
+        padding: 40px 35px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     }
 
-    @keyframes pulse {
-        0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(102, 126, 234, 0.3); }
-        50% { transform: scale(1.02); box-shadow: 0 0 40px rgba(118, 75, 162, 0.5); }
+    .content-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 3px 0 0 3px;
     }
 
-    .lead-text {
-        font-size: 1.4rem;
-        font-weight: 500;
-        color: #e8f0fe;
+    .content-text {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #ffffff;
         margin: 0;
-        line-height: 1.6;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        line-height: 1.8;
+        text-align: justify;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+        letter-spacing: 0.3px;
+        padding-left: 10px;
+    }
+
+    .simple-image {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .simple-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: block;
+        margin: 0 auto;
     }
 
     .feature-card {

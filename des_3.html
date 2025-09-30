@@ -44,6 +44,11 @@
                     <div class="col-lg-8 col-md-6 col-xl-8">
                         <div class="header">
                             <div class="header-main">
+                                <div class="navbar-logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/icon.png" alt="Logo">
+                                    </a>
+                                </div>
                                 <div class="open-nav-menu">
                                     <span></span>
                                 </div>
@@ -59,11 +64,10 @@
                                         <li class="menu-iteam menu-iteam-has-childrean"><a href="des_1.html"
                                                 data-toggle="submenu">Design<i class="plus"></i></a>
                                             <ul class="submenu">
-                                                <li class="menu-iteam"><a href="des_1.html">Inspiration</a></li>
-                                                <li class="menu-iteam"><a href="des_2.html">Algorithm design</a></li>
-                                                <li class="menu-iteam"><a href="des_3.html">Molecular Structure Design</a></li>
-                                                <li class="menu-iteam"><a href="des_4.html">Characterization</a></li>
-                                                <li class="menu-iteam"><a href="des_5.html">Technology Industrial Chain Design</a></li>
+                                                <li class="menu-iteam"><a href="des_1.html">Design Inspiration</a></li>
+                                                <li class="menu-iteam"><a href="des_2.html">Encoding Algorithm</a></li>
+                                                <li class="menu-iteam"><a href="des_3.html">Molecular Architecture</a></li>
+                                                <li class="menu-iteam"><a href="des_4.html">Industrial Ecosystem</a></li>
                                             </ul>
                                         </li>
                                         <li class="menu-iteam menu-iteam-has-childrean"><a href="exp_1.html"
@@ -137,13 +141,10 @@
             <div class="section-block">
                 <h3 class="section-heading">Molecular Architecture</h3>
                 <p class="section-text">
-                    We want to use a cross-linked network composed of polymers to form a three-dimensional reticular spherical structure, which is like a "cage" of DNA, which can "lock" DNA very well.
+                    We want to use a cross-linked network composed of polymers to form a three-dimensional reticular spherical structure, which is like a "cage" of DNA, which can "lock" DNA.
                 </p>
                 <p class="section-text">
-                    Through consulting the data, we learned that under acidic conditions, positively charged gelatin can bind to negatively charged DNA through electrostatic action. While rich in amino acids (-NH₂); Chitosan, which is rich in amino (-NH₂) and hydroxyl (-OH), will proton and positively charged (-NH₃⁺) under acidic conditions, and can also adsorb DNA through electrostatic action. Therefore, we choose gelatin and chitosan as encapsulation materials.
-                </p>
-                <p class="section-text">
-                    In order to better "lock" the DNA molecule, we use glutaraldehyde and vanillin as crosslinking agents, and form a three-dimensional reticulated spherical structure through the chemical reaction between the two and the packaging material. To ensure long-lasting anti-counterfeiting performance, we wrap the silica shell outside the gelatin/chitosan-DNA cage structure to complete the construction of the DNA anti-counterfeiting nanomolecule - Helicipher.
+                    Consultation of the data revealed, we learned that under acidic conditions, positively charged gelatin can bind to negatively charged DNA through electrostatic action. while rich in amino acids (-NH₂; Chitosan, which is rich in amino (-NH₂) and hydroxyl (-OH), will proton and positively charged (-NH₃⁺) under acidic conditions, and can also adsorb DNA through electrostatic action. Therefore, we chose gelatin and chitosan as encapsulation materials. To better "lock" the DNA molecule, we used glutaraldehyde and vanillin as crosslinking agents and formed a three-dimensional reticulated spherical structure through the chemical reaction between the two and the packaging material. To ensure long-lasting anti-counterfeiting performance, we wrapped the silica shell outside the gelatin/chitosan-DNA cage structure to complete the construction of the DNA anti-counterfeiting nanomolecule - Helicipher.
                 </p>
             </div>
             
@@ -185,7 +186,6 @@
             <a href="des_2.html" class="page-numbers">2</a>
             <span class="page-numbers current" aria-current="page">3</span>
             <a href="des_4.html" class="page-numbers">4</a>
-            <a href="des_5.html" class="page-numbers">5</a>
         </div>
     </div>
 
@@ -545,6 +545,41 @@
     .full-nav1:hover {
         background: rgba(15, 23, 42, 0.95);
         box-shadow: var(--shadow-colored);
+    }
+
+    /* 导航栏图标样式 */
+    .navbar-logo {
+        display: inline-block;
+        margin-right: 30px;
+        vertical-align: middle;
+        order: -1; /* 确保图标在最左侧 */
+    }
+
+    .navbar-logo a {
+        display: inline-block;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .navbar-logo a:hover {
+        opacity: 0.8;
+    }
+
+    .navbar-logo img {
+        height: 40px;
+        width: auto;
+        transition: transform 0.3s ease;
+        vertical-align: middle;
+    }
+
+    .navbar-logo img:hover {
+        transform: scale(1.05);
+    }
+
+    .header-main {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
 
 
