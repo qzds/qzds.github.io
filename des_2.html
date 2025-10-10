@@ -64,24 +64,21 @@
                                         <li class="menu-iteam menu-iteam-has-childrean"><a href="des_1.html"
                                                 data-toggle="submenu">Design<i class="plus"></i></a>
                                             <ul class="submenu">
-                                                <li class="menu-iteam"><a href="des_1.html">Design Inspiration</a></li>
-                                                <li class="menu-iteam"><a href="des_2.html">Encoding Algorithm</a></li>
-                                                <li class="menu-iteam"><a href="des_3.html">Molecular Architecture</a></li>
-                                                <li class="menu-iteam"><a href="des_4.html">Industrial Ecosystem</a></li>
+                                                <li class="menu-iteam"><a href="des_1.html">Technical Process</a></li>
+                                                <li class="menu-iteam"><a href="des_2.html">Message Transcoding Algorithm</a></li>
+                                                <li class="menu-iteam"><a href="des_3.html">DNA Nanoparticle Preparation</a></li>
                                             </ul>
                                         </li>
                                         <li class="menu-iteam menu-iteam-has-childrean"><a href="exp_1.html"
                                                 data-toggle="submenu">Experiment<i class="plus"></i></a>
                                             <ul class="submenu">
-                                                <li class="menu-iteam"><a href="exp_1.html">DNA base encoding</a></li>
-                                                <li class="menu-iteam"><a href="exp_2.html">Anti-Counterfeiting Plasmid
-                                                        Construction</a></li>
-                                                <li class="menu-iteam"><a href="exp_3.html">DNA product
-                                                        encapsulation</a></li>
-                                                <li class="menu-iteam"><a href="exp_4.html">Product information
-                                                        decoding</a></li>
-                                                <li class="menu-iteam"><a href="exp_5.html">Sample stability
-                                                        assessment</a></li>
+                                                <li class="menu-iteam"><a href="exp_1.html">DNA Sequence Design and Encoding</a></li>
+                                                <li class="menu-iteam"><a href="exp_2.html">Verification of DNA Encapsulation 
+                                                    via PCR and Gel Electrophoresis</a></li>
+                                                <li class="menu-iteam"><a href="exp_3.html">Zeta Potential and Hydrodynamic Size Measurement</a></li>
+                                                <li class="menu-iteam"><a href="exp_4.html">Verification of DNA Integrity Post-Encapsulation via Lysis and PCR</a></li>
+                                                <li class="menu-iteam"><a href="exp_5.html">High Osmolality and UV Stability Assessment</a></li>
+                                                 <li class="menu-iteam"><a href="exp_6.html"> Verification of Products Achieved with a Rapid Detection Kit</a></li>
                                             </ul>
                                         </li>
 
@@ -140,15 +137,24 @@
         <div class="inspiration-section">
             <div class="intro-block">
                 <p class="lead-text">
-                    We innovatively designed the dynamic mapping relationship between base sequence and information unit, avoided the problem of single base duplication, effectively improved the storage density, and optimized the encoding efficiency from 4 bases/character to 3 bases/character, which brought positive effects to DNA synthesis.
+                    We designed the dynamic relationship between base sequence and information unit, avoided the problem of single base duplication, effectively improved the storage density (from 4 bases per character to 3 bases per character), which substantially reduces homopolymer-induced synthesis errors, increases strand synthesis success rate, and lowers overall synthesis cost per encoded unit.
                 </p>
             </div>
             
             <div class="feature-card algorithm-card">
                 <div class="feature-icon algorithm-icon"></div>
                 <div class="feature-content">
-                    <h3>DNA Coding Algorithm</h3>
-                    <p>The algorithm adopts a <span class="highlight-text">dynamic mapping mechanism</span> to efficiently convert 10 numbers and 26 English letters into DNA sequences, effectively avoids single base duplication and secondary structure generation through metadata compression and optimization of coding rules, and increases the coding density to only <span class="highlight-number">3 bases per character</span>, while keeping the CG content in a stable range.</p>
+                    <h3>DNA Encoding Algorithm</h3>
+                    <p>The principle of DNA encoding algorithms can be understood as <span class="highlight-text">"translating letters and numbers into DNA base sequences."</span> In this context, the four bases—A, T, C, and G—act like phonetic letters, and through different combinations, they can correspond to the 26 English letters and 10 digits. The detailed workflow is shown in the figure below.</p>
+                    
+                    <div class="algorithm-detail">
+                        <p>After the original sequence is preprocessed into a meta-compressed sequence, it is dynamically mapped to <span class="highlight-number">36 DNA base combinations</span> (derived from 4×3×3, with "4" referring to the 4 DNA bases: A (Adenine), T (Thymine), C (Cytosine), G (Guanine)). The optimal combination set is selected per predefined criteria—to avoid single-base repetition (e.g., consecutive "AAAA") and secondary structures (e.g., hairpins/stem-loops that interfere with sequencing/synthesis) and brought positive effects to DNA synthesis.</p>
+                    </div>
+                    
+                    <!-- DNA编码工作流程图 -->
+                    <div class="project-image">
+                        <img src="assets/img/design/2-1.png" alt="DNA Encoding Workflow" style="background-color: rgba(0, 0, 0, 0); padding: 20px;">
+                    </div>
                 </div>
             </div>
             
@@ -156,7 +162,7 @@
                 <div class="feature-icon compression-icon"></div>
                 <div class="feature-content">
                     <h3>Compression Principle</h3>
-                    <p>Through the process of <span class="highlight-text">"identifying duplicate subsequences, establishing metadata mapping, code replacement, and sequence coding"</span>, the long duplicate fields in the original information are replaced with pre-optimized short codes, and the mapping relationship is optimized through multiple rounds of loops to achieve storage density improvement and sequence biochemical characteristics optimization.</p>
+                    <p>The compression principle is like <span class="highlight-text">"spotting repeated parts and replacing them with shorter symbols."</span> The system first identifies repeated segments, then creates a "lookup table" to map them to shorter codes. This process is repeated several times, making the data take up less space while also making the DNA sequence more suitable for storage and use.</p>
                 </div>
             </div>
             
@@ -164,19 +170,11 @@
                 <div class="feature-icon decoding-icon"></div>
                 <div class="feature-content">
                     <h3>DNA Decoding Algorithm</h3>
-                    <p>During decoding, the DNA sequence is first obtained by sequencing, the metadata information for compression is identified and removed, base anomaly detection and preprocessing are carried out, and then the sequence is reverse reduced to character information according to the encoding mapping rules.</p>
+                    <p>During decoding, the DNA sequence is first obtained by sequencing. Then, the <span class="highlight-text">"lookup table information"</span> added during compression is removed, and the sequence goes through error detection and preprocessing. After that, the sequence is gradually restored to text or data according to the original coding rules.</p>
                     
                     <div class="algorithm-detail">
-                        <p>Finally, the data integrity is verified through the <span class="highlight-text">verification mechanism</span> to ensure the accurate output of anti-counterfeiting traceability information.</p>
+                        <p>Finally, a <span class="highlight-text">verification mechanism</span> checks the result to ensure the anti-counterfeiting and traceability information is accurately recovered.</p>
                     </div>
-                </div>
-            </div>
-            
-            <div class="conclusion-box">
-                <div class="conclusion-icon"></div>
-                <div class="conclusion-content">
-                    <h3>Algorithm Innovation</h3>
-                    <p>Our encoding algorithm achieves breakthrough optimization in storage density while maintaining biochemical stability, providing a solid foundation for DNA-based anti-counterfeiting applications.</p>
                 </div>
             </div>
             
@@ -209,7 +207,6 @@
             <span class="page-numbers current" aria-current="page">2</span>
 
             <a href="des_3.html" class="page-numbers">3</a>
-            <a href="des_4.html" class="page-numbers">4</a>
         </div>
     </div>
 
@@ -221,101 +218,7 @@
         <div class="loading-progress"></div>
     </div>
 
-    <!-- footer area -->
-    <!-- <footer class="footer-area">
-        <div class="container">
-            <div class="row pt-40">
-                <div class="col-lg-4 col-md-6">
-                    <div class="ft-content">
-                        <div class="log">
-                            <a href="#"><img src="assets/img/icon2.png" alt="icon"></a>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, porro saepe facilis.
-                            Harum ipsam accusantium id dolorum.</p>
-                        <div class="subcribe-form">
-                            <form action="#">
-                                <input type="email" class="form-control" required="" placeholder="Your Email">
-                                <div class="nav-btn add-btn">
-                                    <button class="box-btn">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="social-nav">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="ft-content">
-                        <h3>Our Service</h3>
-                        <div class="footer-list">
-                            <ul>
-                                <li><a href="#">Development</a></li>
-                                <li><a href="#">Visual Design</a></li>
-                                <li><a href="#">QA & Testing</a></li>
-                                <li><a href="#">IT Management</a></li>
-                                <li><a href="#">Cyber Security</a></li>
-                                <li><a href="#">Wireless Connection</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <div class="ft-content">
-                        <h3>Quick Links</h3>
-                        <div class="footer-list">
-                            <ul>
-                                <li><a href="#">Service</a></li>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Privacy & Policy</a></li>
-                                <li><a href="#">Career</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Data Analysis</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="ft-content">
-                        <h3>Contact</h3>
-                        <div class="foot-social">
-                            <ul>
-                                <li><a href="#"><i class="far fa-envelope"></i>hello@zomo.com</a></li>
-                                <li><a href="#"><i class="fas fa-mobile-alt"></i>+3849854939</a></li>
-                                <li><a href="#"><i class="far fa-envelope"></i>support@zomo.com</a></li>
-                                <li><a href="#"><i class="far fa-envelope"></i>hello@zoko.com</a></li>
-                                <li><a href="#"><i class="fas fa-map-marker-alt"></i>Flat 20, Reynolds Neck, North Hele
-                                        naville, FV77 8WS</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row btm-brd">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <div class="ft-left-btm">
-                        <p>&copy; 2025 All Right Reserved. <a target="_blank" href="https://www.mobanwang.com/"
-                                title="网站模板" class="text-white">网站模板</a></p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="ft-right-btm">
-                        <div class="ft-links">
-                            <ul>
-                                <li><a href="#">Terms of Service</a></li>
-                                <li><a class="border-btm" href="#">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer> -->
+
     <!-- Js File -->
     <script src="assets/js/modernizr.min.js"></script>
     <script src="assets/js/jquery-3.5.1.min.js"></script>
@@ -633,7 +536,7 @@
     }
 
     .page-content h2 {
-        font-family: 'Orbitron', monospace;
+        font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
         font-size: 3.5rem;
         font-weight: 900;
         text-transform: uppercase;
@@ -699,35 +602,94 @@
         text-align: center;
         margin-bottom: 60px;
         position: relative;
+        padding-bottom: 20px;
     }
 
     .design-title {
-        font-family: 'Orbitron', monospace;
+        font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         font-size: 3.5rem;
-        font-weight: 900;
-        background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+        font-weight: 800;
+        background: linear-gradient(135deg, 
+            rgba(255, 255, 255, 0.95) 0%,
+            rgba(255, 255, 255, 0.85) 25%,
+            rgba(0, 212, 255, 0.9) 50%,
+            rgba(255, 255, 255, 0.9) 75%,
+            rgba(255, 255, 255, 0.95) 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
         text-transform: uppercase;
-        letter-spacing: 3px;
-        animation: titleGlow 3s ease-in-out infinite alternate;
+        letter-spacing: 2.5px;
+        line-height: 1.2;
+        position: relative;
+        animation: subtleGradientFlow 8s ease-in-out infinite;
+        text-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
     }
 
-    @keyframes titleGlow {
-        0% { text-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
-        100% { text-shadow: 0 0 40px rgba(118, 75, 162, 0.8); }
+    @keyframes subtleGradientFlow {
+        0%, 100% {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.95) 0%,
+                rgba(255, 255, 255, 0.85) 25%,
+                rgba(0, 212, 255, 0.9) 50%,
+                rgba(255, 255, 255, 0.9) 75%,
+                rgba(255, 255, 255, 0.95) 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        25% {
+            background: linear-gradient(135deg, 
+                rgba(0, 212, 255, 0.8) 0%,
+                rgba(255, 255, 255, 0.95) 25%,
+                rgba(255, 255, 255, 0.9) 50%,
+                rgba(0, 212, 255, 0.85) 75%,
+                rgba(255, 255, 255, 0.95) 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        50% {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.9) 0%,
+                rgba(0, 212, 255, 0.9) 25%,
+                rgba(255, 255, 255, 0.95) 50%,
+                rgba(255, 255, 255, 0.85) 75%,
+                rgba(0, 212, 255, 0.8) 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        75% {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.95) 0%,
+                rgba(255, 255, 255, 0.9) 25%,
+                rgba(0, 212, 255, 0.85) 50%,
+                rgba(255, 255, 255, 0.95) 75%,
+                rgba(0, 212, 255, 0.9) 100%
+            );
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
     }
 
     .dna-helix {
         position: relative;
-        width: 200px;
-        height: 20px;
-        margin: 0 auto;
-        background: linear-gradient(90deg, #667eea, #764ba2);
-        border-radius: 10px;
-        overflow: hidden;
+        width: 240px;
+        height: 6px;
+        margin: 15px auto 0;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(0, 212, 255, 0.3) 20%, 
+            rgba(0, 212, 255, 0.8) 50%, 
+            rgba(0, 212, 255, 0.3) 80%, 
+            transparent 100%
+        );
+        border-radius: 3px;
+        overflow: visible;
+        animation: decorationPulse 3s ease-in-out infinite;
     }
 
     .dna-helix::before {
@@ -737,17 +699,96 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
-        animation: shine 2s infinite;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(255, 255, 255, 0.4) 30%, 
+            rgba(0, 212, 255, 0.6) 50%, 
+            rgba(255, 255, 255, 0.4) 70%, 
+            transparent 100%
+        );
+        border-radius: inherit;
+        animation: decorationFlow 4s ease-in-out infinite;
     }
 
-    @keyframes shine {
-        0% { left: -100%; }
+    .dna-helix::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 8px;
+        height: 8px;
+        background: rgba(0, 212, 255, 0.8);
+        border-radius: 50%;
+        animation: dotPulse 2s ease-in-out infinite;
+        box-shadow: 
+            -60px 0 0 -2px rgba(0, 212, 255, 0.4),
+            -30px 0 0 -1px rgba(0, 212, 255, 0.6),
+            30px 0 0 -1px rgba(0, 212, 255, 0.6),
+            60px 0 0 -2px rgba(0, 212, 255, 0.4);
+    }
+
+    @keyframes decorationPulse {
+        0%, 100% { 
+            opacity: 0.6;
+            transform: scaleX(1);
+        }
+        50% { 
+            opacity: 1;
+            transform: scaleX(1.1);
+        }
+    }
+
+    @keyframes decorationFlow {
+        0% { 
+            left: -100%; 
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% { 
+            left: 100%; 
+            opacity: 0;
+        }
+    }
+
+    @keyframes dotPulse {
+        0%, 100% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.8;
+        }
+        50% {
+            transform: translate(-50%, -50%) scale(1.3);
+            opacity: 1;
+        }
         100% { left: 100%; }
     }
 
     .inspiration-section {
         margin-top: 50px;
+    }
+
+    /* 项目图片样式 */
+    .project-image {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .project-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); */
+        transition: all 0.3s ease;
+    }
+
+    .project-image img:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
 
     .intro-block {
@@ -767,7 +808,7 @@
     }
 
     .lead-text {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 500;
         color: #e8f0fe;
         margin: 0;
@@ -789,6 +830,7 @@
         overflow: hidden;
         animation: fadeInLeft 0.8s ease-out;
         animation-fill-mode: both;
+        gap: 25px;
     }
 
     .feature-card::before {
@@ -831,13 +873,16 @@
     .feature-icon {
         width: 80px;
         height: 80px;
-        margin-right: 30px;
+        margin-right: 0;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
         animation: iconRotate 6s linear infinite;
+        flex-shrink: 0;
+        align-self: flex-start;
+        margin-top: -16.5px;
     }
 
     @keyframes iconRotate {
@@ -906,6 +951,7 @@
         font-weight: 600;
         color: #ffffff;
         margin-bottom: 15px;
+        margin-top: 8px;
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
     }
 
@@ -1058,7 +1104,7 @@
     }
 
     .challenge-number {
-        font-family: 'Orbitron', monospace;
+        font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
         font-size: 3rem;
         font-weight: 900;
         background: linear-gradient(135deg, #667eea, #764ba2);
