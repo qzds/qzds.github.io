@@ -373,10 +373,13 @@
             </div>
             <div class="video-container">
                 <div class="video-wrapper">
-                    <video controls autoplay muted loop playsinline>
-                        <source src="assets/img/home/1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <iframe src="https://www.youtube.com/embed/utONiTpBs1A?si=qSu8zKPHRZZcJMrL" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                    </iframe>
                     <div class="video-overlay"></div>
                 </div>
             </div>
@@ -2608,7 +2611,8 @@
             }
         }
 
-        .video-wrapper video {
+        .video-wrapper video,
+        .video-wrapper iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -2617,6 +2621,7 @@
             object-fit: contain;
             border-radius: 18px;
             background: #000000;
+            border: none;
         }
 
         .video-overlay {
