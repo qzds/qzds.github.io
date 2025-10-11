@@ -30,12 +30,7 @@
     <div class="particles"></div>
 
     <div id="preloader">
-        <div class="loader">
-            <span class="loader-inner-1"></span>
-            <span class="loader-inner-2"></span>
-            <span class="loader-inner-3"></span>
-            <span class="loader-inner-4"></span>
-        </div>
+        <img src="assets/img/home/dna.gif" alt="Loading" class="loading-dna-preloader">
     </div>
     <div class="scroll-area">
         <i class="fa fa-angle-up"></i>
@@ -164,7 +159,9 @@
             
             <h4 style="color: #ffffff; font-size: 1.5rem; margin: 30px 0 20px; font-weight: 600;">XMU-HeliCipher：a DNA-based next-generation anticounterfeiting technique</h4>
             <p>
-                Biological macromolecules such as nucleic acids have amazing ability to store information. According to research, DNA is currently the material with the highest information storage density, with a storage density of up to 6 orders of magnitude. DNA are microscopic and cannot be directly observed with the naked eye or light microscope, so they are highly hidden. More importantly, as a natural biomolecule, DNA has good biocompatibility and high environmental friendliness, and is not likely to cause adverse effects on organisms and the environment. What is particularly critical is its anti-counterfeiting potential: the artificial DNA sequence is almost the same as natural DNA in composition, but its molecular structure is precise and complex, and the base arrangement has a high degree of randomness and complexity, making it difficult to synthesize accurately under normal conditions. Specifically, mixing DNA fragments carrying specific security information into a large number of random or unrelated DNA sequences makes it extremely difficult to imitate and tamper with them, thus greatly raising the threshold for information forgery.
+               Biological macromolecules, such as nucleic acids, possess an astonishing capacity for information storage. Research indicates that DNA stands out as the material with the highest information storage density, boasting a capacity up to six orders of magnitude. Given its microscopic size, DNA cannot be discerned with the naked eye or even a light microscope, rendering it highly concealed. More significantly, as a naturally occurring biomolecule, DNA exhibits excellent biocompatibility and is environmentally benign, posing minimal risk of adverse effects on living organisms or the ecosystem.<br>
+
+                Of particular note is its potential for anti-counterfeiting measures: artificial DNA sequences, while compositionally similar to natural DNA, feature precise and intricate molecular structures. The arrangement of their bases is marked by a high degree of randomness and complexity, making accurate synthesis under normal conditions a formidable challenge. Specifically, by embedding DNA fragments carrying specific security information amidst a vast array of random or unrelated DNA sequences, the task of imitating or tampering with them becomes exceedingly difficult, thereby significantly elevating the bar for information forgery.
             </p>
             
             <div class="project-image">
@@ -206,7 +203,7 @@
             </ol>
 
             <div class="project-image">
-                <img src="assets/img/project/1-2.jpg" alt="DNA Information Storage Platform" style="background-color: white; padding: 20px;">
+                <img src="assets/img/project/1-2.jpg" alt="DNA Information Storage Platform" style="background-color: white; padding: 20px;width: 70%;">
             </div>
 
         </div>
@@ -275,6 +272,7 @@
 
             // 页面加载进度条
             let loadingBar = $('.loading-bar');
+            let loadingProgress = $('.loading-progress');
             let progress = 0;
             let loadingInterval = setInterval(function() {
                 progress += Math.random() * 15;
@@ -285,7 +283,7 @@
                         loadingBar.fadeOut();
                     }, 200);
                 }
-                loadingBar.css('width', progress + '%');
+                loadingProgress.css('width', progress + '%');
             }, 100);
 
             // 滚动时的视差效果
@@ -1569,9 +1567,15 @@ document.addEventListener('DOMContentLoaded', function() {
     createParticles();
     initLoadingBar();
     
-    // 页面加载完成后的动画
+    // 页面加载完成后隐藏DNA预加载器
     window.addEventListener('load', () => {
-        // des_1风格的平滑加载完成
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.style.opacity = '0';
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 500);
+        }
     });
 });
 </script>

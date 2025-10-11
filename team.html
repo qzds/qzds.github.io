@@ -21,14 +21,9 @@
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div id="preloader" style="display: none;">
-        <div class="loader">
-            <span class="loader-inner-1"></span>
-            <span class="loader-inner-2"></span>
-            <span class="loader-inner-3"></span>
-            <span class="loader-inner-4"></span>
-        </div>
+    <!-- DNA加载动画 -->
+    <div id="preloader">
+        <img src="assets/img/home/dna.gif" alt="Loading" class="loading-dna-preloader">
     </div>
 
     <!-- Scroll to Top -->
@@ -284,6 +279,19 @@
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        // 页面加载完成后隐藏DNA加载动画
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                preloader.style.opacity = '0';
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 500);
+            }
+        });
+    </script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');

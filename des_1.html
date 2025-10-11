@@ -24,12 +24,7 @@
 <body>
 
     <div id="preloader">
-        <div class="loader">
-            <span class="loader-inner-1"></span>
-            <span class="loader-inner-2"></span>
-            <span class="loader-inner-3"></span>
-            <span class="loader-inner-4"></span>
-        </div>
+        <img src="assets/img/home/dna.gif" alt="Loading" class="loading-dna-preloader">
     </div>
     <div class="scroll-area">
         <i class="fa fa-angle-up"></i>
@@ -143,15 +138,17 @@
                 
                 <!-- 工业生态系统流程图 -->
                 <div class="workflow-section">
-                    <h3 class="workflow-title">Industrial Ecosystem Workflow</h3>
+                    <h3 class="workflow-title">Workflow</h3>
                     <div class="workflow-container">
                         <!-- 步骤1: 输入数据 -->
                         <div class="workflow-step" data-step="1">
-                            <div class="step-icon-container">
-                                <img src="assets/img/design/4-1.png" alt="Input Data" class="step-icon">
-                            </div>
-                            <div class="step-content">
+                            <div class="step-left">
+                                <div class="step-icon-container">
+                                    <img src="assets/img/design/4-1.png" alt="Input Data" class="step-icon">
+                                </div>
                                 <h4 class="step-title">Input Data</h4>
+                            </div>
+                            <div class="step-right">
                                 <p class="step-description">Receive product information coding and raw material label information</p>
                             </div>
                         </div>
@@ -162,11 +159,13 @@
 
                         <!-- 步骤2: 消息转码 -->
                         <div class="workflow-step" data-step="2">
-                            <div class="step-icon-container">
-                                <img src="assets/img/design/4-2.png" alt="Message Transcoding" class="step-icon">
-                            </div>
-                            <div class="step-content">
+                            <div class="step-left">
+                                <div class="step-icon-container">
+                                    <img src="assets/img/design/4-2.png" alt="Message Transcoding" class="step-icon">
+                                </div>
                                 <h4 class="step-title">Message Transcoding</h4>
+                            </div>
+                            <div class="step-right">
                                 <p class="step-description">Convert product traceability information to standard DNA base sequence</p>
                             </div>
                         </div>
@@ -177,11 +176,13 @@
 
                         <!-- 步骤3: 指纹编码 -->
                         <div class="workflow-step" data-step="3">
-                            <div class="step-icon-container">
-                                <img src="assets/img/design/4-3.png" alt="Fingerprint Code" class="step-icon">
-                            </div>
-                            <div class="step-content">
+                            <div class="step-left">
+                                <div class="step-icon-container">
+                                    <img src="assets/img/design/4-3.png" alt="Fingerprint Code" class="step-icon">
+                                </div>
                                 <h4 class="step-title">Fingerprint Code</h4>
+                            </div>
+                            <div class="step-right">
                                 <p class="step-description">Sequence synthesis based on chemical/biological coding technology</p>
                             </div>
                         </div>
@@ -192,11 +193,13 @@
 
                         <!-- 步骤4: 指纹制备 -->
                         <div class="workflow-step" data-step="4">
-                            <div class="step-icon-container">
-                                <img src="assets/img/design/4-4.png" alt="Fingerprint Preparation" class="step-icon">
-                            </div>
-                            <div class="step-content">
+                            <div class="step-left">
+                                <div class="step-icon-container">
+                                    <img src="assets/img/design/4-4.png" alt="Fingerprint Preparation" class="step-icon">
+                                </div>
                                 <h4 class="step-title">Fingerprint Preparation</h4>
+                            </div>
+                            <div class="step-right">
                                 <p class="step-description">DNA fingerprinting based on PCR technology and artificial cell synthesis</p>
                             </div>
                         </div>
@@ -207,11 +210,13 @@
 
                         <!-- 步骤5: 标记包装 -->
                         <div class="workflow-step" data-step="5">
-                            <div class="step-icon-container">
-                                <img src="assets/img/design/4-5.png" alt="Marking Package" class="step-icon">
+                            <div class="step-left">
+                                <div class="step-icon-container">
+                                    <img src="assets/img/design/4-5.png" alt="Marking Package" class="step-icon">
+                                </div>
+                                <h4 class="step-title">Marker Package</h4>
                             </div>
-                            <div class="step-content">
-                                <h4 class="step-title">Marking Package</h4>
+                            <div class="step-right">
                                 <p class="step-description">Nano/bio-encapsulation and product labeling of DNA fingerprints</p>
                             </div>
                         </div>
@@ -222,11 +227,13 @@
 
                         <!-- 步骤6: 消息解码 -->
                         <div class="workflow-step" data-step="6">
-                            <div class="step-icon-container">
-                                <img src="assets/img/design/4-6.png" alt="Message Decoding" class="step-icon">
-                            </div>
-                            <div class="step-content">
+                            <div class="step-left">
+                                <div class="step-icon-container">
+                                    <img src="assets/img/design/4-6.png" alt="Message Decoding" class="step-icon">
+                                </div>
                                 <h4 class="step-title">Message Decoding</h4>
+                            </div>
+                            <div class="step-right">
                                 <p class="step-description">Instant and accurate decoding of information based on nucleic acid snapshot/fingerprint sequencing technology</p>
                             </div>
                         </div>
@@ -1221,8 +1228,8 @@
 
     /* 流程图样式 */
     .workflow-section {
-        margin: 80px 0;
-        padding: 60px 40px;
+        margin: 50px 0;
+        padding: 40px 30px;
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
         backdrop-filter: blur(25px);
         border-radius: 30px;
@@ -1265,10 +1272,10 @@
 
     .workflow-title {
         font-family: SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         font-weight: 900;
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 35px;
         background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1307,7 +1314,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 25px;
+        gap: 15px;
         max-width: 900px;
         margin: 0 auto;
         position: relative;
@@ -1316,68 +1323,73 @@
 
     .workflow-step {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        text-align: center;
+        justify-content: flex-start;
+        text-align: left;
         width: 100%;
-        padding: 40px 30px;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
-        backdrop-filter: blur(20px);
-        border-radius: 25px;
-        border: 2px solid rgba(255, 255, 255, 0.15);
+        padding: 20px 25px;
+        /* background: transparent; */
+        backdrop-filter: none;
+        border-radius: 0;
+        border: none;
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
         animation-fill-mode: both;
-        overflow: hidden;
-        margin-bottom: 30px;
+        overflow: visible;
+        margin-bottom: 0;
     }
 
     .workflow-step::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 6px;
-        height: 100%;
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        border-radius: 0 3px 3px 0;
-        opacity: 0.8;
+        display: none;
     }
 
-    .workflow-step:nth-child(1) {
+    .step-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 50px;
+        flex-shrink: 0;
+        min-width: 200px;
+        text-align: center;
+    }
+
+    .step-right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .workflow-step[data-step="1"] {
         animation: slideInRight 0.8s ease-out 0.1s, subtlePulse 6s ease-in-out infinite 2s;
         animation-fill-mode: both;
-        border-left-color: rgba(102, 126, 234, 0.4);
     }
 
-    .workflow-step:nth-child(2) {
+    .workflow-step[data-step="2"] {
         animation: slideInRight 0.8s ease-out 0.2s, subtlePulse 6s ease-in-out infinite 2.5s;
         animation-fill-mode: both;
-        border-left-color: rgba(120, 119, 198, 0.4);
     }
 
-    .workflow-step:nth-child(3) {
+    .workflow-step[data-step="3"] {
         animation: slideInRight 0.8s ease-out 0.3s, subtlePulse 6s ease-in-out infinite 3s;
         animation-fill-mode: both;
-        border-left-color: rgba(155, 89, 182, 0.4);
     }
 
-    .workflow-step:nth-child(4) {
+    .workflow-step[data-step="4"] {
         animation: slideInRight 0.8s ease-out 0.4s, subtlePulse 6s ease-in-out infinite 3.5s;
         animation-fill-mode: both;
-        border-left-color: rgba(240, 147, 251, 0.4);
     }
 
-    .workflow-step:nth-child(5) {
+    .workflow-step[data-step="5"] {
         animation: slideInRight 0.8s ease-out 0.5s, subtlePulse 6s ease-in-out infinite 4s;
         animation-fill-mode: both;
-        border-left-color: rgba(245, 87, 108, 0.4);
     }
 
-    .workflow-step:nth-child(6) {
+    .workflow-step[data-step="6"] {
         animation: slideInRight 0.8s ease-out 0.6s, subtlePulse 6s ease-in-out infinite 4.5s;
         animation-fill-mode: both;
-        border-left-color: rgba(78, 205, 196, 0.4);
     }
 
     @keyframes slideInRight {
@@ -1392,86 +1404,59 @@
     }
 
     .workflow-step:hover {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-        box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
-        transform: translateY(-8px) scale(1.02);
-        border-color: rgba(240, 147, 251, 0.5);
+        background: transparent;
+        box-shadow: none;
+        transform: translateY(-3px);
+        border-color: transparent;
     }
 
     .workflow-step:hover::before {
-        width: 100%;
-        background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1));
-        opacity: 0.3;
+        display: none;
     }
 
     .step-icon-container {
         flex-shrink: 0;
-        width: 200px;
-        height: 200px;
-        margin-bottom: 25px;
-        border-radius: 30px;
-        background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
-        backdrop-filter: blur(25px);
-        border: 3px solid rgba(255, 255, 255, 0.4);
+        width: 140px;
+        height: 140px;
+        margin: 0 auto 15px auto;
+        border-radius: 25px;
+        background: transparent;
+        backdrop-filter: none;
+        border: none;
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 15px 60px rgba(102, 126, 234, 0.3);
+        box-shadow: none;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .step-icon-container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, rgba(240, 147, 251, 0.3), rgba(245, 87, 108, 0.3));
-        border-radius: 20px;
-        opacity: 0;
-        transition: all 0.4s ease;
-        transform: scale(0.8);
+        display: none;
     }
 
     .step-icon-container::after {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-        transform: rotate(45deg);
-        animation: shimmer 3s ease-in-out infinite;
-    }
-
-    @keyframes shimmer {
-        0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-        50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        display: none;
     }
 
     .workflow-step:hover .step-icon-container {
         transform: translateY(-15px) scale(1.08);
-        box-shadow: 0 25px 80px rgba(102, 126, 234, 0.5);
-        border-color: rgba(240, 147, 251, 0.8);
+        box-shadow: none;
+        border-color: transparent;
     }
 
     .workflow-step:hover .step-icon-container::before {
-        opacity: 1;
-        transform: scale(1);
+        display: none;
     }
 
     .step-icon {
-        width: 150px;
-        height: 150px;
-        border-radius: 25px;
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
         object-fit: contain;
         background: rgba(255, 255, 255, 0.98);
-        padding: 15px;
+        padding: 12px;
         position: relative;
         z-index: 2;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1496,16 +1481,17 @@
     }
 
     .step-content {
-        width: 100%;
-        max-width: 400px;
+        flex: 1;
+        text-align: left;
     }
 
     .step-title {
         font-family: 'Inter', sans-serif;
-        font-size: 1.6rem;
+        font-size: 1.1rem;
         font-weight: 700;
         color: #ffffff;
-        margin-bottom: 15px;
+        margin: 0;
+        padding-top: 0;
         text-shadow: 
             0 2px 8px rgba(0, 0, 0, 0.6),
             0 1px 2px rgba(0, 0, 0, 0.8);
@@ -1513,40 +1499,29 @@
         position: relative;
         transition: all 0.3s ease;
         text-transform: uppercase;
-        line-height: 1.2;
-        padding-bottom: 8px;
+        line-height: 1.3;
         z-index: 2;
+        text-align: center;
+        white-space: normal;
+        max-width: 200px;
     }
 
     .step-title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 2px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        border-radius: 2px;
-        opacity: 0.7;
-        transition: all 0.3s ease;
+        display: none;
     }
 
     .workflow-step:hover .step-title {
         color: #00d4ff;
         text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-        transform: translateY(-3px);
+        transform: scale(1.05);
     }
 
     .workflow-step:hover .step-title::after {
-        width: 60px;
-        background: linear-gradient(135deg, #00d4ff, #00a2cc);
-        opacity: 1;
-        box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+        display: none;
     }
 
     .step-description {
-        font-size: 1.0rem;
+        font-size: 1.05rem;
         line-height: 1.7;
         color: #b8c5d4;
         margin: 0;
@@ -1554,30 +1529,31 @@
         position: relative;
         transition: all 0.3s ease;
         font-weight: 400;
-        opacity: 0.85;
-        text-align: center;
-        max-width: 350px;
-        margin: 0 auto;
+        opacity: 0.9;
+        text-align: left;
+        padding-left: 25px;
+        border-left: 3px solid rgba(102, 126, 234, 0.4);
     }
 
     .workflow-step:hover .step-description {
         color: #e8f4fd;
         opacity: 1;
-        transform: translateY(-2px);
+        border-left-color: rgba(0, 212, 255, 0.7);
+        padding-left: 30px;
         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     }
 
     .workflow-arrow {
         position: relative;
-        width: 60px;
-        height: 80px;
+        width: 50px;
+        height: 60px;
         background: linear-gradient(135deg, #667eea, #764ba2);
-        border-radius: 30px;
+        border-radius: 25px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 22px;
+        font-size: 20px;
         box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
         border: 3px solid rgba(255, 255, 255, 0.3);
         margin: 0 auto;
@@ -1694,6 +1670,46 @@
         .challenge-number {
             margin-right: 0;
             margin-bottom: 15px;
+        }
+
+        /* 移动端流程步骤改为垂直布局 */
+        .workflow-step {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+
+        .step-left {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+
+        .step-icon-container {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+
+        .step-right {
+            text-align: center;
+            width: 100%;
+        }
+
+        .step-content {
+            text-align: center;
+        }
+
+        .step-description {
+            text-align: center;
+            border-left: none;
+            border-top: 3px solid rgba(102, 126, 234, 0.3);
+            padding-left: 0;
+            padding-top: 15px;
+        }
+
+        .workflow-step:hover .step-description {
+            border-top-color: rgba(0, 212, 255, 0.6);
+            padding-top: 20px;
+            padding-left: 0;
         }
     }
 
