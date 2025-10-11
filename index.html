@@ -362,6 +362,27 @@
     </section>
     <!-- Services Section End -->
 
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">See Our Technology in Action</h2>
+                <p class="section-subtitle">
+                    Watch how XMU-HeliCipher revolutionizes product authentication
+                </p>
+            </div>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video controls autoplay muted loop playsinline>
+                        <source src="assets/img/home/1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
@@ -2468,6 +2489,199 @@
 
         .solution-list i {
             color: #00ff88;
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 100px 40px;
+            background: linear-gradient(135deg,
+                rgba(15, 23, 42, 0.98) 0%,
+                rgba(30, 41, 59, 0.95) 50%,
+                rgba(51, 65, 85, 0.98) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(240, 147, 251, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
+            animation: videoBackgroundPulse 15s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes videoBackgroundPulse {
+            0%, 100% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+
+        .video-section .container {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+        }
+
+        .video-section .section-header {
+            margin-bottom: 60px;
+        }
+
+        .video-section .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #00d4ff 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .video-section .section-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(0, 212, 255, 0.3),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+            border: 3px solid transparent;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(240, 147, 251, 0.2)) padding-box,
+                        linear-gradient(135deg, #00d4ff, #667eea, #00d4ff) border-box;
+        }
+
+        .video-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, 
+                rgba(0, 212, 255, 0.4) 0%, 
+                rgba(102, 126, 234, 0.3) 50%, 
+                rgba(0, 212, 255, 0.4) 100%);
+            border-radius: 22px;
+            opacity: 0.3;
+            z-index: -1;
+            filter: blur(15px);
+            animation: videoGlowPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes videoGlowPulse {
+            0%, 100% { 
+                filter: blur(15px); 
+                opacity: 0.2; 
+            }
+            50% { 
+                filter: blur(18px); 
+                opacity: 0.4; 
+            }
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 18px;
+            background: #000000;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg,
+                rgba(0, 212, 255, 0.05) 0%,
+                transparent 50%,
+                rgba(102, 126, 234, 0.05) 100%);
+            pointer-events: none;
+            opacity: 0.5;
+            mix-blend-mode: overlay;
+        }
+
+        /* Video Section Responsive */
+        @media (max-width: 992px) {
+            .video-section {
+                padding: 80px 30px;
+            }
+
+            .video-section .section-title {
+                font-size: 2.4rem;
+            }
+
+            .video-section .section-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .video-wrapper {
+                border-radius: 15px;
+                border-width: 2px;
+            }
+
+            .video-wrapper::before {
+                border-radius: 17px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .video-section {
+                padding: 60px 20px;
+            }
+
+            .video-section .section-header {
+                margin-bottom: 40px;
+            }
+
+            .video-section .section-title {
+                font-size: 2rem;
+            }
+
+            .video-section .section-subtitle {
+                font-size: 1rem;
+            }
+
+            .video-wrapper {
+                border-radius: 12px;
+            }
+
+            .video-wrapper::before {
+                border-radius: 14px;
+            }
         }
 
         /* CTA Section */
