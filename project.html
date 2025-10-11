@@ -30,7 +30,12 @@
     <div class="particles"></div>
 
     <div id="preloader">
-        <img src="assets/img/home/dna.gif" alt="Loading" class="loading-dna-preloader">
+        <div class="loader">
+            <span class="loader-inner-1"></span>
+            <span class="loader-inner-2"></span>
+            <span class="loader-inner-3"></span>
+            <span class="loader-inner-4"></span>
+        </div>
     </div>
     <div class="scroll-area">
         <i class="fa fa-angle-up"></i>
@@ -203,7 +208,7 @@
             </ol>
 
             <div class="project-image">
-                <img src="assets/img/project/1-2.jpg" alt="DNA Information Storage Platform" style="background-color: white; padding: 20px;width: 70%;">
+                <img src="assets/img/project/1-2.jpg" alt="DNA Information Storage Platform" style="background-color: white; padding: 20px;">
             </div>
 
         </div>
@@ -272,7 +277,6 @@
 
             // 页面加载进度条
             let loadingBar = $('.loading-bar');
-            let loadingProgress = $('.loading-progress');
             let progress = 0;
             let loadingInterval = setInterval(function() {
                 progress += Math.random() * 15;
@@ -283,7 +287,7 @@
                         loadingBar.fadeOut();
                     }, 200);
                 }
-                loadingProgress.css('width', progress + '%');
+                loadingBar.css('width', progress + '%');
             }, 100);
 
             // 滚动时的视差效果
@@ -1567,15 +1571,9 @@ document.addEventListener('DOMContentLoaded', function() {
     createParticles();
     initLoadingBar();
     
-    // 页面加载完成后隐藏DNA预加载器
+    // 页面加载完成后的动画
     window.addEventListener('load', () => {
-        const preloader = document.getElementById('preloader');
-        if (preloader) {
-            preloader.style.opacity = '0';
-            setTimeout(function() {
-                preloader.style.display = 'none';
-            }, 500);
-        }
+        // des_1风格的平滑加载完成
     });
 });
 </script>

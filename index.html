@@ -21,9 +21,14 @@
 </head>
 
 <body>
-    <!-- DNA加载动画 -->
+    <!-- Preloader -->
     <div id="preloader">
-        <img src="assets/img/home/dna.gif" alt="Loading" class="loading-dna-preloader">
+        <div class="loader">
+            <span class="loader-inner-1"></span>
+            <span class="loader-inner-2"></span>
+            <span class="loader-inner-3"></span>
+            <span class="loader-inner-4"></span>
+        </div>
     </div>
 
     <!-- Scroll to Top -->
@@ -112,12 +117,11 @@
                             <span>🧬 XMU-HeliCipher</span>
                         </div>
                         <h1 class="hero-title">
-                             <span class="gradient-text"> XMU-HeliCipher</span><br>
+                            <span class="gradient-text"> XMU-HeliCipher</span><br>
                              Redefining <span class="gradient-text"> Authenticity</span> <br>
                              with <span class="gradient-text">  Nature's</span> Ultimate Proof
                         </h1>
                         <p class="hero-description">
-                            
                             Our innovation is inspired by the wisdom of nature, utilizing the very molecule
                             that makes every organism unique: <strong>DNA</strong>. XMU-HeliCipher encodes product
                             identity into unclonable, stable DNA markers, ensuring its authenticity is as
@@ -449,25 +453,26 @@
     <script src="assets/js/script.js"></script>
 
     <script>
-        // 页面加载完成后隐藏DNA加载动画
+        // 确保 preloader 在页面加载后隐藏 - 后备方案
         window.addEventListener('load', function() {
-            const preloader = document.getElementById('preloader');
-            if (preloader) {
-                preloader.style.opacity = '0';
-                setTimeout(function() {
-                    preloader.style.display = 'none';
-                }, 500);
-            }
+            setTimeout(function() {
+                var preloader = document.getElementById('preloader');
+                if (preloader) {
+                    preloader.style.transition = 'opacity 0.5s ease';
+                    preloader.style.opacity = '0';
+                    setTimeout(function() {
+                        preloader.style.display = 'none';
+                    }, 500);
+                }
+            }, 500);
         });
 
-        // 页面DOM加载和动画管理
+        // 页面加载和动画管理
         document.addEventListener('DOMContentLoaded', function () {
-            // 显示body内容
-            document.body.style.opacity = '1';
-            document.body.style.visibility = 'visible';
+            // 立即显示body内容
             document.body.classList.add('loaded');
 
-            // Hero内容显示
+            // Hero内容立即显示
             const heroContent = document.querySelector('.hero-content');
             if (heroContent) {
                 heroContent.style.opacity = '1';
@@ -954,13 +959,6 @@
             box-sizing: border-box;
         }
 
-        /* 强制隐藏预加载器 */
-        #preloader {
-            display: none !important;
-            opacity: 0 !important;
-            visibility: hidden !important;
-        }
-
         /* 确保body内容立即可见 */
         body {
             opacity: 1 !important;
@@ -982,11 +980,6 @@
             visibility: visible !important;
             display: block !important;
             transform: translateY(0) !important;
-        }
-
-        /* 强制隐藏加载元素 */
-        .loading-bar {
-            display: none !important;
         }
 
         /* Hero Section Styles */

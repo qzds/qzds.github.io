@@ -22,11 +22,14 @@
 
 <body>
 
-    <!-- DNA加载动画 -->
     <div id="preloader">
-        <img src="assets/img/home/dna.gif" alt="Loading" class="loading-dna-preloader">
+        <div class="loader">
+            <span class="loader-inner-1"></span>
+            <span class="loader-inner-2"></span>
+            <span class="loader-inner-3"></span>
+            <span class="loader-inner-4"></span>
+        </div>
     </div>
-    
     <div class="scroll-area">
         <i class="fa fa-angle-up"></i>
     </div>
@@ -187,6 +190,11 @@
 
     <!-- 粒子效果容器 -->
     <div class="particles"></div>
+    
+    <!-- 加载进度条 -->
+    <div class="loading-bar">
+        <div class="loading-progress"></div>
+    </div>
 
 
     <!-- Js File -->
@@ -240,6 +248,26 @@
                 animatedElements.forEach(el => observer.observe(el));
             }
 
+            // 加载进度条
+            function initLoadingBar() {
+                const loadingBar = document.querySelector('.loading-progress');
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += Math.random() * 30;
+                    if (progress >= 100) {
+                        progress = 100;
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            document.querySelector('.loading-bar').style.opacity = '0';
+                            setTimeout(() => {
+                                document.querySelector('.loading-bar').style.display = 'none';
+                            }, 500);
+                        }, 200);
+                    }
+                    loadingBar.style.width = progress + '%';
+                }, 100);
+            }
+
             // 悬浮效果增强
             function initHoverEffects() {
                 // 移除了卡片的位移和缩放效果
@@ -263,21 +291,11 @@
             // 初始化所有功能
             createParticles();
             initScrollAnimations();
+            initLoadingBar();
             initHoverEffects();
 
             // 页面加载完成后的动画
             window.addEventListener('load', () => {
-                // 隐藏DNA加载动画
-                const preloader = document.querySelector('#preloader');
-                if (preloader) {
-                    setTimeout(() => {
-                        preloader.style.opacity = '0';
-                        setTimeout(() => {
-                            preloader.style.display = 'none';
-                        }, 500);
-                    }, 300);
-                }
-
                 document.body.classList.add('loaded');
                 
                 // 为标题添加打字机效果
@@ -354,6 +372,26 @@
         33% { background: #00ff88; box-shadow: 0 0 4px #00ff88; }
         66% { background: #ffaa00; box-shadow: 0 0 4px #ffaa00; }
         100% { background: #00d4ff; box-shadow: 0 0 4px #00d4ff; }
+    }
+
+    /* 加载进度条 */
+    .loading-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        z-index: 10000;
+        transition: opacity 0.5s ease;
+    }
+
+    .loading-progress {
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        width: 0%;
+        transition: width 0.3s ease;
+        box-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
     }
 
     /* 页面加载状态 */

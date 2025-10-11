@@ -106,48 +106,77 @@ p{
 }
 /*Header area*/
 /* loader */
-/* DNA Preloader */
 #preloader {
   position: fixed;
-  top: 0;
+  top:0;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(12, 12, 12, 0.98);
-  backdrop-filter: blur(10px);
-  z-index: 99999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.5s ease;
-}
+  background-color: #fff;
+  z-index: 999999; 
+  display: block;
 
-.loading-dna-preloader {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.8));
-  animation: dnaPulse 2s ease-in-out infinite;
 }
-
-@keyframes dnaPulse {
-  0%, 100% {
-    transform: scale(1);
-    filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.8));
-  }
-  50% {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 40px rgba(0, 212, 255, 1));
-  }
+.loader{
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
 }
-
-/* 旧的loader样式保留用于兼容 */
-.loader {
-  display: none;
+.loader .loader-inner-1,
+.loader .loader-inner-2,
+.loader .loader-inner-3,
+.loader .loader-inner-4{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
 }
-
+.loader .loader-inner-1:before,
+.loader .loader-inner-2:before,
+.loader .loader-inner-3:before,
+.loader .loader-inner-4:before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    position: absolute;
+    right: 0;
+    animation-name: loading-1;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-duration: 2s;
+}
+.loader .loader-inner-1{
+    top: 0;
+    left: 0;
+    transform: rotate(70deg);
+}
+.loader .loader-inner-1:before{ background: #06aed5; }
+.loader .loader-inner-2{
+    top: 0;
+    right: 0;
+    transform: rotate(160deg);
+}
+.loader .loader-inner-2:before{ background: #ec008c; }
+.loader .loader-inner-3{
+    bottom: 0;
+    right: 0;
+    transform: rotate(-110deg);
+}
+.loader .loader-inner-3:before{ background: #ffbf00; }
+.loader .loader-inner-4{
+    bottom: 0;
+    left: 0;
+    transform: rotate(-20deg);
+}
+.loader .loader-inner-4:before{ background: #079c00; }
 @keyframes loading-1{
     0%{
         width: 20px;
